@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>oro_grid_view - bap_standard Database</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>bap_standard</b> Database</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>oro_grid_view</h1><p><span id="recordNumber">0</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title='Automatically updated by the database'>√</td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="oro_grid_view_user.grid_view_id references oro_grid_view.id via fk_oro_grid_view_user_grid_view_id"><a href='oro_grid_view_user.html'>oro_grid_view_user</a><span class='relatedKey'>.grid_view_id</span></td>
+                                                <td class="constraint detail">fk_oro_grid_view_user_grid_view_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="organization_id">organization_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="oro_grid_view.organization_id references oro_organization.id via fk_oro_grid_view_organization_id"><a href='oro_organization.html'>oro_organization</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_oro_grid_view_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="user_owner_id">user_owner_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="oro_grid_view.user_owner_id references oro_user.id via fk_oro_grid_view_user_owner_id"><a href='oro_user.html'>oro_user</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_oro_grid_view_user_owner_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="name">name</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="type">type</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="filtersData">filtersData</span></td>
+                                    <td>LONGTEXT</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>(DC2Type:array)(DC2Type:array)</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="sortersData">sortersData</span></td>
+                                    <td>LONGTEXT</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>(DC2Type:array)(DC2Type:array)</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="columnsData">columnsData</span></td>
+                                    <td>LONGTEXT</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>(DC2Type:array)(DC2Type:array)</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="gridName">gridName</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PRIMARY</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_5B73FBCB32C8A3DE</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>organization_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_5B73FBCB9EB185F9</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>user_owner_id</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="oro_grid_view.html" target="_top" title="oro_grid_view" alt="" coords="516,5,836,336">
+<area shape="rect" id="node2" href="oro_organization.html" target="_top" title="oro_organization" alt="" coords="5,105,192,247">
+<area shape="rect" id="node3" href="oro_user.html" target="_top" title="oro_user" alt="" coords="236,113,472,461">
+<area shape="rect" id="node4" href="oro_grid_view_user.html" target="_top" title="oro_grid_view_user" alt="" coords="880,147,1085,267">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/oro_grid_view.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="ca_letter.html" target="_top" title="ca_letter" alt="" coords="867,508,1002,592">
+<area shape="rect" id="node2" href="oro_organization.html" target="_top" title="oro_organization" alt="" coords="5,1519,192,1661">
+<area shape="rect" id="node3" href="oro_user.html" target="_top" title="oro_user" alt="" coords="495,1861,731,2209">
+<area shape="rect" id="node8" href="oro_business_unit.html" target="_top" title="oro_business_unit" alt="" coords="245,1199,442,1283">
+<area shape="rect" id="node12" href="oro_attachment_file.html" target="_top" title="oro_attachment_file" alt="" coords="240,1813,447,1897">
+<area shape="rect" id="node45" href="oro_user_status.html" target="_top" title="oro_user_status" alt="" coords="252,1952,435,2036">
+<area shape="rect" id="node4" href="ca_phone_call.html" target="_top" title="ca_phone_call" alt="" coords="849,812,1021,896">
+<area shape="rect" id="node5" href="ca_risk_assessment.html" target="_top" title="ca_risk_assessment" alt="" coords="829,2111,1040,2195">
+<area shape="rect" id="node6" href="ca_witness_attendance.html" target="_top" title="ca_witness_attendance" alt="" coords="819,2212,1050,2296">
+<area shape="rect" id="node7" href="oro_access_group.html" target="_top" title="oro_access_group" alt="" coords="513,1125,712,1209">
+<area shape="rect" id="node9" href="oro_activity_list.html" target="_top" title="oro_activity_list" alt="" coords="845,913,1024,997">
+<area shape="rect" id="node10" href="oro_activity_owner.html" target="_top" title="oro_activity_owner" alt="" coords="1150,913,1350,997">
+<area shape="rect" id="node11" href="oro_attachment.html" target="_top" title="oro_attachment" alt="" coords="845,1217,1025,1301">
+<area shape="rect" id="node13" href="oro_audit.html" target="_top" title="oro_audit" alt="" coords="863,1116,1007,1200">
+<area shape="rect" id="node14" href="oro_calendar.html" target="_top" title="oro_calendar" alt="" coords="853,1015,1017,1099">
+<area shape="rect" id="node15" href="oro_calendar_event.html" target="_top" title="oro_calendar_event" alt="" coords="1146,1015,1354,1099">
+<area shape="rect" id="node16" href="oro_system_calendar.html" target="_top" title="oro_system_calendar" alt="" coords="503,1365,722,1449">
+<area shape="rect" id="node17" href="oro_comment.html" target="_top" title="oro_comment" alt="" coords="851,1319,1019,1403">
+<area shape="rect" id="node18" href="oro_dashboard.html" target="_top" title="oro_dashboard" alt="" coords="846,3381,1023,3465">
+<area shape="rect" id="node19" href="oro_dashboard_active.html" target="_top" title="oro_dashboard_active" alt="" coords="1139,3349,1361,3433">
+<area shape="rect" id="node20" href="oro_dashboard_widget_state.html" target="_top" title="oro_dashboard_widget_state" alt="" coords="801,1559,1068,1643">
+<area shape="rect" id="node21" href="oro_email_address.html" target="_top" title="oro_email_address" alt="" coords="1427,2195,1629,2279">
+<area shape="rect" id="node22" href="oro_email_mailbox.html" target="_top" title="oro_email_mailbox" alt="" coords="1149,3451,1351,3535">
+<area shape="rect" id="node23" href="oro_email_origin.html" target="_top" title="oro_email_origin" alt="" coords="841,3483,1028,3567">
+<area shape="rect" id="node24" href="oro_email_mailbox_users.html" target="_top" title="oro_email_mailbox_users" alt="" coords="1405,2659,1651,2743">
+<area shape="rect" id="node25" href="oro_email_template.html" target="_top" title="oro_email_template" alt="" coords="831,3584,1038,3668">
+<area shape="rect" id="node26" href="oro_email_user.html" target="_top" title="oro_email_user" alt="" coords="1439,3484,1617,3568">
+<area shape="rect" id="node27" href="oro_embedded_form.html" target="_top" title="oro_embedded_form" alt="" coords="236,740,451,824">
+<area shape="rect" id="node28" href="oro_entity_config_log.html" target="_top" title="oro_entity_config_log" alt="" coords="826,1697,1043,1781">
+<area shape="rect" id="node29" href="oro_grid_view.html" target="_top" title="oro_grid_view" alt="" coords="775,2931,1095,3262">
+<area shape="rect" id="node30" href="oro_grid_view_user.html" target="_top" title="oro_grid_view_user" alt="" coords="1147,2201,1353,2321">
+<area shape="rect" id="node31" href="oro_integration_channel.html" target="_top" title="oro_integration_channel" alt="" coords="817,167,1053,251">
+<area shape="rect" id="node32" href="oro_navigation_history.html" target="_top" title="oro_navigation_history" alt="" coords="822,3723,1047,3807">
+<area shape="rect" id="node33" href="oro_navigation_item.html" target="_top" title="oro_navigation_item" alt="" coords="829,3824,1040,3908">
+<area shape="rect" id="node34" href="oro_navigation_pagestate.html" target="_top" title="oro_navigation_pagestate" alt="" coords="811,1799,1058,1883">
+<area shape="rect" id="node35" href="oro_note.html" target="_top" title="oro_note" alt="" coords="867,2829,1003,2913">
+<area shape="rect" id="node36" href="oro_notification_recip_user.html" target="_top" title="oro_notification_recip_user" alt="" coords="807,2009,1062,2093">
+<area shape="rect" id="node37" href="oro_reminder.html" target="_top" title="oro_reminder" alt="" coords="852,2313,1017,2397">
+<area shape="rect" id="node38" href="oro_report.html" target="_top" title="oro_report" alt="" coords="540,987,685,1071">
+<area shape="rect" id="node39" href="oro_segment.html" target="_top" title="oro_segment" alt="" coords="531,1264,695,1348">
+<area shape="rect" id="node40" href="oro_sidebar_state.html" target="_top" title="oro_sidebar_state" alt="" coords="837,2415,1033,2499">
+<area shape="rect" id="node41" href="oro_sidebar_widget.html" target="_top" title="oro_sidebar_widget" alt="" coords="831,3925,1038,4009">
+<area shape="rect" id="node42" href="oro_tag_tag.html" target="_top" title="oro_tag_tag" alt="" coords="857,3280,1013,3364">
+<area shape="rect" id="node43" href="oro_tag_tagging.html" target="_top" title="oro_tag_tagging" alt="" coords="1158,2567,1342,2651">
+<area shape="rect" id="node44" href="oro_tracking_website.html" target="_top" title="oro_tracking_website" alt="" coords="827,4027,1043,4111">
+<area shape="rect" id="node46" href="oro_user_access_group.html" target="_top" title="oro_user_access_group" alt="" coords="817,609,1053,693">
+<area shape="rect" id="node47" href="oro_user_access_role.html" target="_top" title="oro_user_access_role" alt="" coords="823,2553,1046,2637">
+<area shape="rect" id="node48" href="oro_user_api.html" target="_top" title="oro_user_api" alt="" coords="853,65,1017,149">
+<area shape="rect" id="node49" href="oro_user_business_unit.html" target="_top" title="oro_user_business_unit" alt="" coords="818,711,1051,795">
+<area shape="rect" id="node50" href="oro_user_email.html" target="_top" title="oro_user_email" alt="" coords="845,2655,1024,2739">
+<area shape="rect" id="node51" href="oro_user_organization.html" target="_top" title="oro_user_organization" alt="" coords="823,305,1047,389">
+<area shape="rect" id="node52" href="oro_windows_state.html" target="_top" title="oro_windows_state" alt="" coords="833,1457,1037,1541">
+<area shape="rect" id="node53" href="orocrm_task.html" target="_top" title="orocrm_task" alt="" coords="855,407,1014,491">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/oro_grid_view.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

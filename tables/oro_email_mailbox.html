@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>oro_email_mailbox - bap_standard Database</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>bap_standard</b> Database</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>oro_email_mailbox</h1><p><span id="recordNumber">0</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title='Automatically updated by the database'>√</td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="oro_email_address.owner_mailbox_id references oro_email_mailbox.id via fk_oro_email_address_owner_mailbox_id"><a href='oro_email_address.html'>oro_email_address</a><span class='relatedKey'>.owner_mailbox_id</span></td>
+                                                <td class="constraint detail">fk_oro_email_address_owner_mailbox_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_email_auto_response_rule.mailbox_id references oro_email_mailbox.id via fk_oro_email_auto_response_rule_mailbox_id"><a href='oro_email_auto_response_rule.html'>oro_email_auto_response_rule</a><span class='relatedKey'>.mailbox_id</span></td>
+                                                <td class="constraint detail">fk_oro_email_auto_response_rule_mailbox_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_email_mailbox_roles.mailbox_id references oro_email_mailbox.id via fk_oro_email_mailbox_roles_mailbox_id"><a href='oro_email_mailbox_roles.html'>oro_email_mailbox_roles</a><span class='relatedKey'>.mailbox_id</span></td>
+                                                <td class="constraint detail">fk_oro_email_mailbox_roles_mailbox_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_email_mailbox_users.mailbox_id references oro_email_mailbox.id via fk_oro_email_mailbox_users_mailbox_id"><a href='oro_email_mailbox_users.html'>oro_email_mailbox_users</a><span class='relatedKey'>.mailbox_id</span></td>
+                                                <td class="constraint detail">fk_oro_email_mailbox_users_mailbox_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_email_user.mailbox_owner_id references oro_email_mailbox.id via fk_oro_email_user_mailbox_owner_id"><a href='oro_email_user.html'>oro_email_user</a><span class='relatedKey'>.mailbox_owner_id</span></td>
+                                                <td class="constraint detail">fk_oro_email_user_mailbox_owner_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="organization_id">organization_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="oro_email_mailbox.organization_id references oro_organization.id via fk_oro_email_mailbox_organization_id"><a href='oro_organization.html'>oro_organization</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_oro_email_mailbox_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="process_settings_id">process_settings_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="oro_email_mailbox.process_settings_id references oro_email_mailbox_process.id via fk_oro_email_mailbox_process_settings_id"><a href='oro_email_mailbox_process.html'>oro_email_mailbox_process</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_oro_email_mailbox_process_settings_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="origin_id">origin_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="oro_email_mailbox.origin_id references oro_email_origin.id via fk_oro_email_mailbox_origin_id"><a href='oro_email_origin.html'>oro_email_origin</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_oro_email_mailbox_origin_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="email">email</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="label">label</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="created_at">created_at</span></td>
+                                    <td>DATETIME</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="updated_at">updated_at</span></td>
+                                    <td>DATETIME</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PRIMARY</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_574C364F32C8A3DE</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>organization_id</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> UNIQ_574C364F37BAC19A</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>process_settings_id</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> UNIQ_574C364F56A273CC</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>origin_id</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> UNIQ_574C364FE7927C74</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>email</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> UNIQ_574C364FEA750E8</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>label</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="oro_email_address.html" target="_top" title="oro_email_address" alt="" coords="928,5,1131,207">
+<area shape="rect" id="node2" href="oro_email_mailbox.html" target="_top" title="oro_email_mailbox" alt="" coords="544,439,843,741">
+<area shape="rect" id="node4" href="oro_organization.html" target="_top" title="oro_organization" alt="" coords="5,719,192,861">
+<area shape="rect" id="node5" href="oro_email_origin.html" target="_top" title="oro_email_origin" alt="" coords="247,795,489,996">
+<area shape="rect" id="node6" href="oro_email_mailbox_process.html" target="_top" title="oro_email_mailbox_process" alt="" coords="236,547,500,660">
+<area shape="rect" id="node3" href="oro_email_auto_response_rule.html" target="_top" title="oro_email_auto_response_rule" alt="" coords="887,224,1172,396">
+<area shape="rect" id="node7" href="oro_email_mailbox_roles.html" target="_top" title="oro_email_mailbox_roles" alt="" coords="909,414,1150,534">
+<area shape="rect" id="node8" href="oro_email_mailbox_users.html" target="_top" title="oro_email_mailbox_users" alt="" coords="907,551,1152,671">
+<area shape="rect" id="node9" href="oro_email_user.html" target="_top" title="oro_email_user" alt="" coords="928,689,1131,949">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/oro_email_mailbox.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="ca_letter.html" target="_top" title="ca_letter" alt="" coords="806,294,941,378">
+<area shape="rect" id="node2" href="oro_organization.html" target="_top" title="oro_organization" alt="" coords="5,1207,192,1350">
+<area shape="rect" id="node3" href="oro_user.html" target="_top" title="oro_user" alt="" coords="526,1075,670,1159">
+<area shape="rect" id="node6" href="oro_business_unit.html" target="_top" title="oro_business_unit" alt="" coords="247,266,444,350">
+<area shape="rect" id="node4" href="ca_phone_call.html" target="_top" title="ca_phone_call" alt="" coords="787,395,959,479">
+<area shape="rect" id="node5" href="oro_access_group.html" target="_top" title="oro_access_group" alt="" coords="499,73,697,157">
+<area shape="rect" id="node7" href="oro_activity_list.html" target="_top" title="oro_activity_list" alt="" coords="784,699,963,783">
+<area shape="rect" id="node8" href="oro_activity_owner.html" target="_top" title="oro_activity_owner" alt="" coords="1099,699,1299,783">
+<area shape="rect" id="node9" href="oro_attachment.html" target="_top" title="oro_attachment" alt="" coords="783,497,963,581">
+<area shape="rect" id="node10" href="oro_audit.html" target="_top" title="oro_audit" alt="" coords="801,598,945,682">
+<area shape="rect" id="node11" href="oro_calendar.html" target="_top" title="oro_calendar" alt="" coords="791,1286,955,1370">
+<area shape="rect" id="node12" href="oro_comment.html" target="_top" title="oro_comment" alt="" coords="789,801,957,885">
+<area shape="rect" id="node13" href="oro_dashboard.html" target="_top" title="oro_dashboard" alt="" coords="785,1185,962,1269">
+<area shape="rect" id="node14" href="oro_dashboard_active.html" target="_top" title="oro_dashboard_active" alt="" coords="1087,1185,1310,1269">
+<area shape="rect" id="node15" href="oro_email.html" target="_top" title="oro_email" alt="" coords="1792,859,1935,943">
+<area shape="rect" id="node16" href="oro_email_address.html" target="_top" title="oro_email_address" alt="" coords="1433,857,1636,1058">
+<area shape="rect" id="node17" href="oro_email_mailbox.html" target="_top" title="oro_email_mailbox" alt="" coords="1049,2151,1348,2452">
+<area shape="rect" id="node21" href="oro_email_origin.html" target="_top" title="oro_email_origin" alt="" coords="753,2606,994,2807">
+<area shape="rect" id="node22" href="oro_email_mailbox_process.html" target="_top" title="oro_email_mailbox_process" alt="" coords="741,2475,1005,2589">
+<area shape="rect" id="node18" href="oro_email_auto_response_rule.html" target="_top" title="oro_email_auto_response_rule" alt="" coords="1392,2013,1677,2185">
+<area shape="rect" id="node19" href="oro_email_template.html" target="_top" title="oro_email_template" alt="" coords="770,2235,977,2319">
+<area shape="rect" id="node20" href="oro_email_folder.html" target="_top" title="oro_email_folder" alt="" coords="1770,2609,1957,2693">
+<area shape="rect" id="node23" href="oro_email_mailbox_roles.html" target="_top" title="oro_email_mailbox_roles" alt="" coords="1414,2341,1655,2461">
+<area shape="rect" id="node24" href="oro_access_role.html" target="_top" title="oro_access_role" alt="" coords="1106,2470,1291,2554">
+<area shape="rect" id="node25" href="oro_email_mailbox_users.html" target="_top" title="oro_email_mailbox_users" alt="" coords="1412,1488,1657,1608">
+<area shape="rect" id="node26" href="oro_email_recipient.html" target="_top" title="oro_email_recipient" alt="" coords="2049,505,2255,589">
+<area shape="rect" id="node27" href="oro_email_response_rule_cond.html" target="_top" title="oro_email_response_rule_cond" alt="" coords="1721,2015,2005,2099">
+<area shape="rect" id="node28" href="oro_email_user.html" target="_top" title="oro_email_user" alt="" coords="2051,1325,2253,1585">
+<area shape="rect" id="node29" href="oro_email_user_folders.html" target="_top" title="oro_email_user_folders" alt="" coords="2299,1794,2529,1878">
+<area shape="rect" id="node30" href="oro_embedded_form.html" target="_top" title="oro_embedded_form" alt="" coords="238,2511,453,2595">
+<area shape="rect" id="node31" href="oro_grid_view.html" target="_top" title="oro_grid_view" alt="" coords="789,1387,958,1471">
+<area shape="rect" id="node32" href="oro_integration_channel.html" target="_top" title="oro_integration_channel" alt="" coords="755,119,991,203">
+<area shape="rect" id="node33" href="oro_navigation_history.html" target="_top" title="oro_navigation_history" alt="" coords="761,1489,986,1573">
+<area shape="rect" id="node34" href="oro_navigation_item.html" target="_top" title="oro_navigation_item" alt="" coords="768,1590,979,1674">
+<area shape="rect" id="node35" href="oro_note.html" target="_top" title="oro_note" alt="" coords="805,902,941,986">
+<area shape="rect" id="node36" href="oro_report.html" target="_top" title="oro_report" alt="" coords="525,174,671,258">
+<area shape="rect" id="node37" href="oro_segment.html" target="_top" title="oro_segment" alt="" coords="516,313,680,397">
+<area shape="rect" id="node38" href="oro_sidebar_widget.html" target="_top" title="oro_sidebar_widget" alt="" coords="770,1691,977,1775">
+<area shape="rect" id="node39" href="oro_system_calendar.html" target="_top" title="oro_system_calendar" alt="" coords="236,2613,455,2697">
+<area shape="rect" id="node40" href="oro_tag_tag.html" target="_top" title="oro_tag_tag" alt="" coords="795,1793,951,1877">
+<area shape="rect" id="node41" href="oro_tracking_website.html" target="_top" title="oro_tracking_website" alt="" coords="765,1894,981,1978">
+<area shape="rect" id="node42" href="oro_user_api.html" target="_top" title="oro_user_api" alt="" coords="791,1995,955,2079">
+<area shape="rect" id="node43" href="oro_user_organization.html" target="_top" title="oro_user_organization" alt="" coords="761,2097,985,2181">
+<area shape="rect" id="node44" href="orocrm_task.html" target="_top" title="orocrm_task" alt="" coords="794,2337,953,2421">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/oro_email_mailbox.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

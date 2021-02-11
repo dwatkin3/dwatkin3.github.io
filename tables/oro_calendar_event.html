@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>oro_calendar_event - bap_standard Database</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>bap_standard</b> Database</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>oro_calendar_event</h1><p><span id="recordNumber">13</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title='Automatically updated by the database'>√</td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="oro_calendar_event.parent_id references oro_calendar_event.id via fk_oro_calendar_event_parent_id"><a href='oro_calendar_event.html'>oro_calendar_event</a><span class='relatedKey'>.parent_id</span></td>
+                                                <td class="constraint detail">fk_oro_calendar_event_parent_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_rel_calendarevent_witness_witness_9c813ece.calendarevent_id references oro_calendar_event.id via FK_BCA8638767C87231"><a href='oro_rel_calendarevent_witness_witness_9c813ece.html'>oro_rel_calendarevent_witness_witness_9c813ece</a><span class='relatedKey'>.calendarevent_id</span></td>
+                                                <td class="constraint detail">FK_BCA8638767C87231<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="system_calendar_id">system_calendar_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="oro_calendar_event.system_calendar_id references oro_system_calendar.id via fk_oro_calendar_event_system_calendar_id"><a href='oro_system_calendar.html'>oro_system_calendar</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_oro_calendar_event_system_calendar_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="parent_id">parent_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="oro_calendar_event.parent_id references oro_calendar_event.id via fk_oro_calendar_event_parent_id"><a href='oro_calendar_event.html'>oro_calendar_event</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_oro_calendar_event_parent_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="calendar_id">calendar_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="oro_calendar_event.calendar_id references oro_calendar.id via FK_2DDC40DDA40A2C8"><a href='oro_calendar.html'>oro_calendar</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">FK_2DDC40DDA40A2C8<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="title">title</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="description">description</span></td>
+                                    <td>LONGTEXT</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="start_at">start_at</span></td>
+                                    <td>DATETIME</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="end_at">end_at</span></td>
+                                    <td>DATETIME</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="all_day">all_day</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="background_color">background_color</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>7</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="created_at">created_at</span></td>
+                                    <td>DATETIME</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="updated_at">updated_at</span></td>
+                                    <td>DATETIME</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="invitation_status">invitation_status</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>32</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="type_id">type_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="oro_calendar_event.type_id references ca_event_type.id via fk_oro_calendar_event_type_id"><a href='ca_event_type.html'>ca_event_type</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_oro_calendar_event_type_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="location_id">location_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="oro_calendar_event.location_id references ca_court.id via fk_oro_calendar_event_location_id"><a href='ca_court.html'>ca_court</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_oro_calendar_event_location_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="worker_id">worker_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="oro_calendar_event.worker_id references oro_user.id via fk_oro_calendar_event_worker_id"><a href='oro_user.html'>oro_user</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_oro_calendar_event_worker_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="status_id">status_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="oro_calendar_event.status_id references ca_event_status.id via fk_oro_calendar_event_status_id"><a href='ca_event_status.html'>ca_event_status</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_oro_calendar_event_status_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="isAnonymised">isAnonymised</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PRIMARY</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_2DDC40DD55F0F9D0</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>system_calendar_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_2DDC40DD727ACA70</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>parent_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_2ddc40dda40a2c8</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>calendar_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_oro_calendar_event_location_id</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>location_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_oro_calendar_event_status_id</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>status_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_oro_calendar_event_type_id</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>type_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_oro_calendar_event_worker_id</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>worker_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>oro_calendar_event_idx</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>calendar_id + start_at + end_at</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>oro_calendar_event_up_idx</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>updated_at</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>oro_sys_calendar_event_idx</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>system_calendar_id + start_at + end_at</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="oro_calendar.html" target="_top" title="oro_calendar" alt="" coords="320,195,487,367">
+<area shape="rect" id="node2" href="oro_user.html" target="_top" title="oro_user" alt="" coords="5,475,241,823">
+<area shape="rect" id="node3" href="oro_calendar_event.html" target="_top" title="oro_calendar_event" alt="" coords="565,103,920,698">
+<area shape="rect" id="node4" href="ca_court.html" target="_top" title="ca_court" alt="" coords="285,515,521,716">
+<area shape="rect" id="node5" href="ca_event_status.html" target="_top" title="ca_event_status" alt="" coords="311,771,496,884">
+<area shape="rect" id="node6" href="oro_system_calendar.html" target="_top" title="oro_system_calendar" alt="" coords="294,5,513,177">
+<area shape="rect" id="node7" href="ca_event_type.html" target="_top" title="ca_event_type" alt="" coords="317,384,490,497">
+<area shape="rect" id="node8" href="oro_rel_calendarevent_witness_witness_9c813ece.html" target="_top" title="oro_rel_calendarevent_witness_witness_9c813ece" alt="" coords="964,106,1399,226">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/oro_calendar_event.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="ca_court.html" target="_top" title="ca_court" alt="" coords="803,129,1039,331">
+<area shape="rect" id="node2" href="ca_address.html" target="_top" title="ca_address" alt="" coords="545,321,698,405">
+<area shape="rect" id="node3" href="oro_business_unit.html" target="_top" title="oro_business_unit" alt="" coords="247,2200,444,2284">
+<area shape="rect" id="node4" href="ca_web_court_court_type.html" target="_top" title="ca_web_court_court_type" alt="" coords="499,220,744,304">
+<area shape="rect" id="node7" href="oro_organization.html" target="_top" title="oro_organization" alt="" coords="5,3368,192,3452">
+<area shape="rect" id="node5" href="ca_experience_survey.html" target="_top" title="ca_experience_survey" alt="" coords="1163,132,1389,216">
+<area shape="rect" id="node6" href="ca_letter.html" target="_top" title="ca_letter" alt="" coords="854,385,989,469">
+<area shape="rect" id="node8" href="oro_user.html" target="_top" title="oro_user" alt="" coords="503,2429,739,2777">
+<area shape="rect" id="node13" href="oro_attachment_file.html" target="_top" title="oro_attachment_file" alt="" coords="818,3092,1025,3176">
+<area shape="rect" id="node50" href="oro_user_status.html" target="_top" title="oro_user_status" alt="" coords="254,2476,437,2560">
+<area shape="rect" id="node9" href="ca_phone_call.html" target="_top" title="ca_phone_call" alt="" coords="835,487,1007,571">
+<area shape="rect" id="node10" href="ca_risk_assessment.html" target="_top" title="ca_risk_assessment" alt="" coords="1609,1472,1820,1556">
+<area shape="rect" id="node11" href="ca_witness.html" target="_top" title="ca_witness" alt="" coords="1200,2241,1352,2325">
+<area shape="rect" id="node12" href="ca_trial_court.html" target="_top" title="ca_trial_court" alt="" coords="1193,3092,1359,3176">
+<area shape="rect" id="node14" href="ca_witness_attendance.html" target="_top" title="ca_witness_attendance" alt="" coords="1599,1727,1830,1811">
+<area shape="rect" id="node15" href="oro_activity_list.html" target="_top" title="oro_activity_list" alt="" coords="832,689,1011,773">
+<area shape="rect" id="node16" href="oro_activity_owner.html" target="_top" title="oro_activity_owner" alt="" coords="1176,689,1376,773">
+<area shape="rect" id="node17" href="oro_attachment.html" target="_top" title="oro_attachment" alt="" coords="1186,2140,1366,2224">
+<area shape="rect" id="node18" href="oro_audit.html" target="_top" title="oro_audit" alt="" coords="849,588,993,672">
+<area shape="rect" id="node19" href="oro_calendar.html" target="_top" title="oro_calendar" alt="" coords="838,929,1005,1101">
+<area shape="rect" id="node20" href="oro_calendar_event.html" target="_top" title="oro_calendar_event" alt="" coords="1099,1527,1453,2122">
+<area shape="rect" id="node21" href="ca_event_status.html" target="_top" title="ca_event_status" alt="" coords="829,2417,1014,2531">
+<area shape="rect" id="node22" href="oro_system_calendar.html" target="_top" title="oro_system_calendar" alt="" coords="236,885,455,1057">
+<area shape="rect" id="node23" href="ca_event_type.html" target="_top" title="ca_event_type" alt="" coords="835,2112,1008,2225">
+<area shape="rect" id="node24" href="oro_calendar_property.html" target="_top" title="oro_calendar_property" alt="" coords="1163,932,1389,1016">
+<area shape="rect" id="node25" href="oro_comment.html" target="_top" title="oro_comment" alt="" coords="837,1257,1005,1341">
+<area shape="rect" id="node26" href="oro_dashboard.html" target="_top" title="oro_dashboard" alt="" coords="833,3672,1010,3756">
+<area shape="rect" id="node27" href="oro_dashboard_active.html" target="_top" title="oro_dashboard_active" alt="" coords="1165,3672,1387,3756">
+<area shape="rect" id="node28" href="oro_dashboard_widget_state.html" target="_top" title="oro_dashboard_widget_state" alt="" coords="788,2316,1055,2400">
+<area shape="rect" id="node29" href="oro_email_address.html" target="_top" title="oro_email_address" alt="" coords="820,2548,1023,2632">
+<area shape="rect" id="node30" href="oro_email_mailbox_users.html" target="_top" title="oro_email_mailbox_users" alt="" coords="799,2649,1044,2733">
+<area shape="rect" id="node31" href="oro_email_origin.html" target="_top" title="oro_email_origin" alt="" coords="828,4520,1015,4604">
+<area shape="rect" id="node32" href="oro_email_template.html" target="_top" title="oro_email_template" alt="" coords="818,3571,1025,3655">
+<area shape="rect" id="node33" href="oro_email_user.html" target="_top" title="oro_email_user" alt="" coords="1187,4520,1365,4604">
+<area shape="rect" id="node34" href="oro_entity_config_log.html" target="_top" title="oro_entity_config_log" alt="" coords="813,2751,1030,2835">
+<area shape="rect" id="node35" href="oro_grid_view.html" target="_top" title="oro_grid_view" alt="" coords="837,3469,1006,3553">
+<area shape="rect" id="node36" href="oro_grid_view_user.html" target="_top" title="oro_grid_view_user" alt="" coords="1173,3331,1379,3415">
+<area shape="rect" id="node37" href="oro_integration_channel.html" target="_top" title="oro_integration_channel" alt="" coords="803,3368,1039,3452">
+<area shape="rect" id="node38" href="oro_navigation_history.html" target="_top" title="oro_navigation_history" alt="" coords="809,3773,1034,3857">
+<area shape="rect" id="node39" href="oro_navigation_item.html" target="_top" title="oro_navigation_item" alt="" coords="816,3875,1027,3959">
+<area shape="rect" id="node40" href="oro_navigation_pagestate.html" target="_top" title="oro_navigation_pagestate" alt="" coords="798,2889,1045,2973">
+<area shape="rect" id="node41" href="oro_note.html" target="_top" title="oro_note" alt="" coords="853,3267,989,3351">
+<area shape="rect" id="node42" href="oro_notification_recip_user.html" target="_top" title="oro_notification_recip_user" alt="" coords="794,2991,1049,3075">
+<area shape="rect" id="node43" href="oro_rel_calendarevent_witness_witness_9c813ece.html" target="_top" title="oro_rel_calendarevent_witness_witness_9c813ece" alt="" coords="1497,2134,1932,2254">
+<area shape="rect" id="node44" href="oro_reminder.html" target="_top" title="oro_reminder" alt="" coords="839,1504,1004,1588">
+<area shape="rect" id="node45" href="oro_sidebar_state.html" target="_top" title="oro_sidebar_state" alt="" coords="823,1605,1019,1689">
+<area shape="rect" id="node46" href="oro_sidebar_widget.html" target="_top" title="oro_sidebar_widget" alt="" coords="818,3976,1025,4060">
+<area shape="rect" id="node47" href="oro_tag_tag.html" target="_top" title="oro_tag_tag" alt="" coords="843,791,999,875">
+<area shape="rect" id="node48" href="oro_tag_tagging.html" target="_top" title="oro_tag_tagging" alt="" coords="1184,1181,1368,1265">
+<area shape="rect" id="node49" href="oro_tracking_website.html" target="_top" title="oro_tracking_website" alt="" coords="813,4077,1029,4161">
+<area shape="rect" id="node51" href="oro_user_access_group.html" target="_top" title="oro_user_access_group" alt="" coords="803,1707,1039,1791">
+<area shape="rect" id="node52" href="oro_user_access_role.html" target="_top" title="oro_user_access_role" alt="" coords="810,1808,1033,1892">
+<area shape="rect" id="node53" href="oro_user_api.html" target="_top" title="oro_user_api" alt="" coords="839,4179,1003,4263">
+<area shape="rect" id="node54" href="oro_user_business_unit.html" target="_top" title="oro_user_business_unit" alt="" coords="805,1156,1038,1240">
+<area shape="rect" id="node55" href="oro_user_email.html" target="_top" title="oro_user_email" alt="" coords="832,1909,1011,1993">
+<area shape="rect" id="node56" href="oro_user_organization.html" target="_top" title="oro_user_organization" alt="" coords="809,4280,1033,4364">
+<area shape="rect" id="node57" href="oro_windows_state.html" target="_top" title="oro_windows_state" alt="" coords="819,2011,1023,2095">
+<area shape="rect" id="node58" href="orocrm_task.html" target="_top" title="orocrm_task" alt="" coords="842,4381,1001,4465">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/oro_calendar_event.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

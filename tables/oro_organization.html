@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>oro_organization - bap_standard Database</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>bap_standard</b> Database</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>oro_organization</h1><p><span id="recordNumber">0</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title='Automatically updated by the database'>√</td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_letter.organization_id references oro_organization.id via fk_ca_letter_organization_id"><a href='ca_letter.html'>ca_letter</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_ca_letter_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ca_phone_call.organization_id references oro_organization.id via fk_ca_phone_call_organization_id"><a href='ca_phone_call.html'>ca_phone_call</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_ca_phone_call_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_access_group.organization_id references oro_organization.id via fk_oro_access_group_organization_id"><a href='oro_access_group.html'>oro_access_group</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_access_group_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_activity_list.organization_id references oro_organization.id via fk_oro_activity_list_organization_id"><a href='oro_activity_list.html'>oro_activity_list</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_activity_list_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_activity_owner.organization_id references oro_organization.id via fk_oro_activity_owner_organization_id"><a href='oro_activity_owner.html'>oro_activity_owner</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_activity_owner_organization_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_attachment.organization_id references oro_organization.id via fk_oro_attachment_organization_id"><a href='oro_attachment.html'>oro_attachment</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_attachment_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_audit.organization_id references oro_organization.id via fk_oro_audit_organization_id"><a href='oro_audit.html'>oro_audit</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_audit_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_business_unit.organization_id references oro_organization.id via fk_oro_business_unit_organization_id"><a href='oro_business_unit.html'>oro_business_unit</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_business_unit_organization_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_calendar.organization_id references oro_organization.id via fk_oro_calendar_organization_id"><a href='oro_calendar.html'>oro_calendar</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_calendar_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_comment.organization_id references oro_organization.id via fk_oro_comment_organization_id"><a href='oro_comment.html'>oro_comment</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_comment_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_dashboard.organization_id references oro_organization.id via fk_oro_dashboard_organization_id"><a href='oro_dashboard.html'>oro_dashboard</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_dashboard_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_dashboard_active.organization_id references oro_organization.id via fk_oro_dashboard_active_organization_id"><a href='oro_dashboard_active.html'>oro_dashboard_active</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_dashboard_active_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_email_mailbox.organization_id references oro_organization.id via fk_oro_email_mailbox_organization_id"><a href='oro_email_mailbox.html'>oro_email_mailbox</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_email_mailbox_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_email_origin.organization_id references oro_organization.id via fk_oro_email_origin_organization_id"><a href='oro_email_origin.html'>oro_email_origin</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_email_origin_organization_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_email_template.organization_id references oro_organization.id via fk_oro_email_template_organization_id"><a href='oro_email_template.html'>oro_email_template</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_email_template_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_email_user.organization_id references oro_organization.id via fk_oro_email_user_organization_id"><a href='oro_email_user.html'>oro_email_user</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_email_user_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_embedded_form.owner_id references oro_organization.id via fk_oro_embedded_form_owner_id"><a href='oro_embedded_form.html'>oro_embedded_form</a><span class='relatedKey'>.owner_id</span></td>
+                                                <td class="constraint detail">fk_oro_embedded_form_owner_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_grid_view.organization_id references oro_organization.id via fk_oro_grid_view_organization_id"><a href='oro_grid_view.html'>oro_grid_view</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_grid_view_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_integration_channel.organization_id references oro_organization.id via fk_oro_integration_channel_organization_id"><a href='oro_integration_channel.html'>oro_integration_channel</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_integration_channel_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_navigation_history.organization_id references oro_organization.id via fk_oro_navigation_history_organization_id"><a href='oro_navigation_history.html'>oro_navigation_history</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_navigation_history_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_navigation_item.organization_id references oro_organization.id via fk_oro_navigation_item_organization_id"><a href='oro_navigation_item.html'>oro_navigation_item</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_navigation_item_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_note.organization_id references oro_organization.id via fk_oro_note_organization_id"><a href='oro_note.html'>oro_note</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_note_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_report.organization_id references oro_organization.id via fk_oro_report_organization_id"><a href='oro_report.html'>oro_report</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_report_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_segment.organization_id references oro_organization.id via fk_oro_segment_organization_id"><a href='oro_segment.html'>oro_segment</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_segment_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_sidebar_widget.organization_id references oro_organization.id via fk_oro_sidebar_widget_organization_id"><a href='oro_sidebar_widget.html'>oro_sidebar_widget</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_sidebar_widget_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_system_calendar.organization_id references oro_organization.id via fk_oro_system_calendar_organization_id"><a href='oro_system_calendar.html'>oro_system_calendar</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_system_calendar_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_tag_tag.organization_id references oro_organization.id via fk_oro_tag_tag_organization_id"><a href='oro_tag_tag.html'>oro_tag_tag</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_tag_tag_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_tracking_website.organization_id references oro_organization.id via fk_oro_tracking_website_organization_id"><a href='oro_tracking_website.html'>oro_tracking_website</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_tracking_website_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_user.organization_id references oro_organization.id via fk_oro_user_organization_id"><a href='oro_user.html'>oro_user</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_user_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_user_api.organization_id references oro_organization.id via fk_oro_user_api_organization_id"><a href='oro_user_api.html'>oro_user_api</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_user_api_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_user_organization.organization_id references oro_organization.id via fk_oro_user_organization_organization_id"><a href='oro_user_organization.html'>oro_user_organization</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_oro_user_organization_organization_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="orocrm_task.organization_id references oro_organization.id via fk_orocrm_task_organization_id"><a href='orocrm_task.html'>orocrm_task</a><span class='relatedKey'>.organization_id</span></td>
+                                                <td class="constraint detail">fk_orocrm_task_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="name">name</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="description">description</span></td>
+                                    <td>LONGTEXT</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="created_at">created_at</span></td>
+                                    <td>DATETIME</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="updated_at">updated_at</span></td>
+                                    <td>DATETIME</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="enabled">enabled</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PRIMARY</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> uniq_bb42b65d5e237e06</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>name</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="ca_letter.html" target="_top" title="ca_letter" alt="" coords="1007,172,1173,403">
+<area shape="rect" id="node2" href="oro_organization.html" target="_top" title="oro_organization" alt="" coords="5,2290,337,2533">
+<area shape="rect" id="node3" href="oro_user.html" target="_top" title="oro_user" alt="" coords="661,2349,897,2697">
+<area shape="rect" id="node6" href="oro_business_unit.html" target="_top" title="oro_business_unit" alt="" coords="381,1839,617,2011">
+<area shape="rect" id="node4" href="ca_phone_call.html" target="_top" title="ca_phone_call" alt="" coords="984,420,1196,651">
+<area shape="rect" id="node5" href="oro_access_group.html" target="_top" title="oro_access_group" alt="" coords="661,1373,897,1551">
+<area shape="rect" id="node7" href="oro_activity_list.html" target="_top" title="oro_activity_list" alt="" coords="983,1697,1197,2016">
+<area shape="rect" id="node8" href="oro_activity_owner.html" target="_top" title="oro_activity_owner" alt="" coords="1294,1639,1494,1818">
+<area shape="rect" id="node9" href="oro_attachment.html" target="_top" title="oro_attachment" alt="" coords="1000,668,1180,869">
+<area shape="rect" id="node10" href="oro_audit.html" target="_top" title="oro_audit" alt="" coords="1007,1201,1173,1491">
+<area shape="rect" id="node11" href="oro_calendar.html" target="_top" title="oro_calendar" alt="" coords="1007,1508,1173,1680">
+<area shape="rect" id="node12" href="oro_comment.html" target="_top" title="oro_comment" alt="" coords="1006,2033,1174,2235">
+<area shape="rect" id="node13" href="oro_dashboard.html" target="_top" title="oro_dashboard" alt="" coords="1001,3295,1179,3496">
+<area shape="rect" id="node14" href="oro_dashboard_active.html" target="_top" title="oro_dashboard_active" alt="" coords="1283,2543,1505,2722">
+<area shape="rect" id="node15" href="oro_email_mailbox.html" target="_top" title="oro_email_mailbox" alt="" coords="1292,4945,1496,5205">
+<area shape="rect" id="node16" href="oro_email_origin.html" target="_top" title="oro_email_origin" alt="" coords="969,5184,1211,5385">
+<area shape="rect" id="node17" href="oro_email_template.html" target="_top" title="oro_email_template" alt="" coords="987,2580,1193,2840">
+<area shape="rect" id="node18" href="oro_email_user.html" target="_top" title="oro_email_user" alt="" coords="1549,3619,1752,3879">
+<area shape="rect" id="node19" href="oro_embedded_form.html" target="_top" title="oro_embedded_form" alt="" coords="392,2385,607,2528">
+<area shape="rect" id="node20" href="oro_grid_view.html" target="_top" title="oro_grid_view" alt="" coords="1005,2857,1175,3029">
+<area shape="rect" id="node21" href="oro_integration_channel.html" target="_top" title="oro_integration_channel" alt="" coords="941,887,1239,1147">
+<area shape="rect" id="node22" href="oro_navigation_history.html" target="_top" title="oro_navigation_history" alt="" coords="977,3047,1203,3277">
+<area shape="rect" id="node23" href="oro_navigation_item.html" target="_top" title="oro_navigation_item" alt="" coords="985,3513,1195,3715">
+<area shape="rect" id="node24" href="oro_note.html" target="_top" title="oro_note" alt="" coords="988,2252,1192,2453">
+<area shape="rect" id="node25" href="oro_report.html" target="_top" title="oro_report" alt="" coords="661,1569,897,1800">
+<area shape="rect" id="node26" href="oro_segment.html" target="_top" title="oro_segment" alt="" coords="661,1855,897,2115">
+<area shape="rect" id="node27" href="oro_sidebar_widget.html" target="_top" title="oro_sidebar_widget" alt="" coords="987,3732,1193,3963">
+<area shape="rect" id="node28" href="oro_system_calendar.html" target="_top" title="oro_system_calendar" alt="" coords="390,3004,609,3176">
+<area shape="rect" id="node29" href="oro_tag_tag.html" target="_top" title="oro_tag_tag" alt="" coords="1007,3980,1173,4181">
+<area shape="rect" id="node30" href="oro_tracking_website.html" target="_top" title="oro_tracking_website" alt="" coords="982,4199,1198,4400">
+<area shape="rect" id="node31" href="oro_user_api.html" target="_top" title="oro_user_api" alt="" coords="1007,4418,1173,4597">
+<area shape="rect" id="node32" href="oro_user_organization.html" target="_top" title="oro_user_organization" alt="" coords="978,4614,1202,4734">
+<area shape="rect" id="node33" href="orocrm_task.html" target="_top" title="orocrm_task" alt="" coords="992,4752,1188,5129">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/oro_organization.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="ca_court.html" target="_top" title="ca_court" alt="" coords="710,5442,854,5526">
+<area shape="rect" id="node2" href="oro_business_unit.html" target="_top" title="oro_business_unit" alt="" coords="381,5402,617,5574">
+<area shape="rect" id="node6" href="oro_organization.html" target="_top" title="oro_organization" alt="" coords="5,2515,337,2757">
+<area shape="rect" id="node3" href="ca_letter.html" target="_top" title="ca_letter" alt="" coords="1012,6265,1179,6495">
+<area shape="rect" id="node4" href="ca_letter_status.html" target="_top" title="ca_letter_status" alt="" coords="691,6357,873,6441">
+<area shape="rect" id="node5" href="ca_letter_type.html" target="_top" title="ca_letter_type" alt="" coords="697,6218,867,6302">
+<area shape="rect" id="node7" href="oro_user.html" target="_top" title="oro_user" alt="" coords="664,3499,900,3847">
+<area shape="rect" id="node14" href="oro_attachment_file.html" target="_top" title="oro_attachment_file" alt="" coords="396,4791,603,4875">
+<area shape="rect" id="node79" href="oro_user_status.html" target="_top" title="oro_user_status" alt="" coords="408,3498,591,3582">
+<area shape="rect" id="node8" href="ca_phone_call.html" target="_top" title="ca_phone_call" alt="" coords="989,6017,1201,6247">
+<area shape="rect" id="node9" href="ca_phone_call_status.html" target="_top" title="ca_phone_call_status" alt="" coords="672,6117,892,6201">
+<area shape="rect" id="node10" href="ca_phone_call_type.html" target="_top" title="ca_phone_call_type" alt="" coords="678,6015,886,6099">
+<area shape="rect" id="node11" href="ca_risk_assessment.html" target="_top" title="ca_risk_assessment" alt="" coords="1373,5695,1583,5779">
+<area shape="rect" id="node12" href="ca_witness.html" target="_top" title="ca_witness" alt="" coords="1019,5713,1171,5797">
+<area shape="rect" id="node13" href="ca_trial.html" target="_top" title="ca_trial" alt="" coords="718,5581,846,5665">
+<area shape="rect" id="node15" href="ca_witness_attendance.html" target="_top" title="ca_witness_attendance" alt="" coords="1363,5278,1593,5362">
+<area shape="rect" id="node16" href="oro_access_group.html" target="_top" title="oro_access_group" alt="" coords="664,5683,900,5861">
+<area shape="rect" id="node17" href="oro_activity_list.html" target="_top" title="oro_activity_list" alt="" coords="988,4489,1203,4807">
+<area shape="rect" id="node18" href="oro_activity_owner.html" target="_top" title="oro_activity_owner" alt="" coords="1378,3503,1578,3681">
+<area shape="rect" id="node19" href="oro_attachment.html" target="_top" title="oro_attachment" alt="" coords="1005,4934,1185,5135">
+<area shape="rect" id="node20" href="oro_audit.html" target="_top" title="oro_audit" alt="" coords="1012,718,1179,1007">
+<area shape="rect" id="node21" href="oro_audit_field.html" target="_top" title="oro_audit_field" alt="" coords="1391,723,1565,807">
+<area shape="rect" id="node22" href="oro_calendar.html" target="_top" title="oro_calendar" alt="" coords="1012,2178,1179,2350">
+<area shape="rect" id="node23" href="oro_calendar_event.html" target="_top" title="oro_calendar_event" alt="" coords="1374,2657,1582,2741">
+<area shape="rect" id="node24" href="oro_system_calendar.html" target="_top" title="oro_system_calendar" alt="" coords="390,2113,609,2285">
+<area shape="rect" id="node25" href="oro_calendar_property.html" target="_top" title="oro_calendar_property" alt="" coords="1365,2181,1591,2265">
+<area shape="rect" id="node26" href="oro_comment.html" target="_top" title="oro_comment" alt="" coords="1011,2813,1179,3014">
+<area shape="rect" id="node27" href="oro_dashboard.html" target="_top" title="oro_dashboard" alt="" coords="1007,1637,1184,1838">
+<area shape="rect" id="node28" href="oro_dashboard_active.html" target="_top" title="oro_dashboard_active" alt="" coords="1367,1788,1589,1967">
+<area shape="rect" id="node29" href="oro_dashboard_widget.html" target="_top" title="oro_dashboard_widget" alt="" coords="1365,1662,1591,1746">
+<area shape="rect" id="node30" href="oro_dashboard_widget_state.html" target="_top" title="oro_dashboard_widget_state" alt="" coords="1719,2485,1985,2569">
+<area shape="rect" id="node31" href="oro_email.html" target="_top" title="oro_email" alt="" coords="2058,4459,2201,4543">
+<area shape="rect" id="node32" href="oro_email_address.html" target="_top" title="oro_email_address" alt="" coords="1751,4409,1953,4493">
+<area shape="rect" id="node33" href="oro_email_mailbox.html" target="_top" title="oro_email_mailbox" alt="" coords="1376,4501,1580,4761">
+<area shape="rect" id="node37" href="oro_email_origin.html" target="_top" title="oro_email_origin" alt="" coords="975,5494,1216,5695">
+<area shape="rect" id="node38" href="oro_email_mailbox_process.html" target="_top" title="oro_email_mailbox_process" alt="" coords="965,4249,1225,4333">
+<area shape="rect" id="node34" href="oro_email_auto_response_rule.html" target="_top" title="oro_email_auto_response_rule" alt="" coords="1712,1857,1992,1941">
+<area shape="rect" id="node35" href="oro_email_template.html" target="_top" title="oro_email_template" alt="" coords="992,1025,1199,1285">
+<area shape="rect" id="node36" href="oro_email_folder.html" target="_top" title="oro_email_folder" alt="" coords="2036,4857,2223,4941">
+<area shape="rect" id="node39" href="oro_email_mailbox_roles.html" target="_top" title="oro_email_mailbox_roles" alt="" coords="1731,4510,1973,4594">
+<area shape="rect" id="node40" href="oro_email_mailbox_users.html" target="_top" title="oro_email_mailbox_users" alt="" coords="1729,3883,1975,3967">
+<area shape="rect" id="node41" href="oro_email_template_translation.html" target="_top" title="oro_email_template_translation" alt="" coords="1337,977,1619,1061">
+<area shape="rect" id="node42" href="oro_email_user.html" target="_top" title="oro_email_user" alt="" coords="2267,4413,2469,4673">
+<area shape="rect" id="node43" href="oro_email_user_folders.html" target="_top" title="oro_email_user_folders" alt="" coords="2513,4574,2744,4658">
+<area shape="rect" id="node44" href="oro_embedded_form.html" target="_top" title="oro_embedded_form" alt="" coords="392,1886,607,2029">
+<area shape="rect" id="node45" href="oro_entity_config_log.html" target="_top" title="oro_entity_config_log" alt="" coords="987,3742,1204,3826">
+<area shape="rect" id="node46" href="oro_grid_view.html" target="_top" title="oro_grid_view" alt="" coords="1011,2623,1180,2795">
+<area shape="rect" id="node47" href="oro_grid_view_user.html" target="_top" title="oro_grid_view_user" alt="" coords="1375,2959,1581,3043">
+<area shape="rect" id="node48" href="oro_integration_channel.html" target="_top" title="oro_integration_channel" alt="" coords="947,6907,1244,7167">
+<area shape="rect" id="node49" href="oro_integration_transport.html" target="_top" title="oro_integration_transport" alt="" coords="661,7011,903,7095">
+<area shape="rect" id="node50" href="oro_integration_channel_status.html" target="_top" title="oro_integration_channel_status" alt="" coords="1337,6910,1619,6994">
+<area shape="rect" id="node51" href="oro_navigation_history.html" target="_top" title="oro_navigation_history" alt="" coords="983,1893,1208,2123">
+<area shape="rect" id="node52" href="oro_navigation_item.html" target="_top" title="oro_navigation_item" alt="" coords="990,281,1201,482">
+<area shape="rect" id="node53" href="oro_navigation_item_pinbar.html" target="_top" title="oro_navigation_item_pinbar" alt="" coords="1349,281,1607,365">
+<area shape="rect" id="node54" href="oro_navigation_pagestate.html" target="_top" title="oro_navigation_pagestate" alt="" coords="972,3843,1219,3927">
+<area shape="rect" id="node55" href="oro_note.html" target="_top" title="oro_note" alt="" coords="993,3031,1197,3233">
+<area shape="rect" id="node56" href="oro_notification_email_notif.html" target="_top" title="oro_notification_email_notif" alt="" coords="1350,1078,1606,1162">
+<area shape="rect" id="node57" href="oro_notification_recip_group.html" target="_top" title="oro_notification_recip_group" alt="" coords="964,5814,1227,5898">
+<area shape="rect" id="node58" href="oro_notification_recip_user.html" target="_top" title="oro_notification_recip_user" alt="" coords="968,3945,1223,4029">
+<area shape="rect" id="node59" href="oro_rel_activitylist_witness_witness_7cc73eb9.html" target="_top" title="oro_rel_activitylist_witness_witness_7cc73eb9" alt="" coords="1288,5018,1668,5102">
+<area shape="rect" id="node60" href="oro_rel_letter_witness_witness_9c813ece.html" target="_top" title="oro_rel_letter_witness_witness_9c813ece" alt="" coords="1303,6194,1653,6278">
+<area shape="rect" id="node61" href="oro_rel_phonecall_witness_witness_9c813ece.html" target="_top" title="oro_rel_phonecall_witness_witness_9c813ece" alt="" coords="1288,5909,1668,5993">
+<area shape="rect" id="node62" href="oro_rel_task_witness_witness_9c813ece.html" target="_top" title="oro_rel_task_witness_witness_9c813ece" alt="" coords="1306,6369,1650,6453">
+<area shape="rect" id="node63" href="orocrm_task.html" target="_top" title="orocrm_task" alt="" coords="997,6513,1193,6890">
+<area shape="rect" id="node88" href="oro_workflow_item.html" target="_top" title="oro_workflow_item" alt="" coords="682,6495,882,6579">
+<area shape="rect" id="node89" href="oro_workflow_step.html" target="_top" title="oro_workflow_step" alt="" coords="399,6634,599,6718">
+<area shape="rect" id="node90" href="ca_task_status.html" target="_top" title="ca_task_status" alt="" coords="694,6873,870,6957">
+<area shape="rect" id="node91" href="orocrm_task_priority.html" target="_top" title="orocrm_task_priority" alt="" coords="677,6670,887,6754">
+<area shape="rect" id="node92" href="ca_task_type.html" target="_top" title="ca_task_type" alt="" coords="700,6771,864,6855">
+<area shape="rect" id="node64" href="oro_reminder.html" target="_top" title="oro_reminder" alt="" coords="1013,4046,1178,4130">
+<area shape="rect" id="node65" href="oro_report.html" target="_top" title="oro_report" alt="" coords="664,4879,900,5110">
+<area shape="rect" id="node66" href="oro_report_type.html" target="_top" title="oro_report_type" alt="" coords="409,4970,590,5054">
+<area shape="rect" id="node67" href="oro_segment.html" target="_top" title="oro_segment" alt="" coords="664,5127,900,5387">
+<area shape="rect" id="node68" href="oro_segment_type.html" target="_top" title="oro_segment_type" alt="" coords="399,5218,599,5302">
+<area shape="rect" id="node69" href="oro_segment_snapshot.html" target="_top" title="oro_segment_snapshot" alt="" coords="980,5153,1211,5237">
+<area shape="rect" id="node70" href="oro_sidebar_state.html" target="_top" title="oro_sidebar_state" alt="" coords="997,4147,1193,4231">
+<area shape="rect" id="node71" href="oro_sidebar_widget.html" target="_top" title="oro_sidebar_widget" alt="" coords="992,33,1199,263">
+<area shape="rect" id="node72" href="oro_tag_tag.html" target="_top" title="oro_tag_tag" alt="" coords="1012,2405,1179,2606">
+<area shape="rect" id="node73" href="oro_tag_tagging.html" target="_top" title="oro_tag_tagging" alt="" coords="1386,2799,1570,2883">
+<area shape="rect" id="node74" href="oro_tracking_event.html" target="_top" title="oro_tracking_event" alt="" coords="1377,419,1579,503">
+<area shape="rect" id="node75" href="oro_tracking_website.html" target="_top" title="oro_tracking_website" alt="" coords="987,499,1203,701">
+<area shape="rect" id="node76" href="oro_tracking_event_dictionary.html" target="_top" title="oro_tracking_event_dictionary" alt="" coords="1341,521,1615,605">
+<area shape="rect" id="node77" href="oro_tracking_visit.html" target="_top" title="oro_tracking_visit" alt="" coords="1382,622,1574,706">
+<area shape="rect" id="node78" href="oro_tracking_visit_event.html" target="_top" title="oro_tracking_visit_event" alt="" coords="1734,470,1970,554">
+<area shape="rect" id="node80" href="oro_user_access_group.html" target="_top" title="oro_user_access_group" alt="" coords="977,5355,1213,5439">
+<area shape="rect" id="node81" href="oro_user_access_group_role.html" target="_top" title="oro_user_access_group_role" alt="" coords="961,5915,1229,5999">
+<area shape="rect" id="node82" href="oro_user_access_role.html" target="_top" title="oro_user_access_role" alt="" coords="984,4350,1207,4434">
+<area shape="rect" id="node83" href="oro_user_api.html" target="_top" title="oro_user_api" alt="" coords="1012,1303,1179,1481">
+<area shape="rect" id="node84" href="oro_user_business_unit.html" target="_top" title="oro_user_business_unit" alt="" coords="979,5254,1212,5338">
+<area shape="rect" id="node85" href="oro_user_email.html" target="_top" title="oro_user_email" alt="" coords="1006,3539,1185,3623">
+<area shape="rect" id="node86" href="oro_user_organization.html" target="_top" title="oro_user_organization" alt="" coords="983,1499,1207,1619">
+<area shape="rect" id="node87" href="oro_windows_state.html" target="_top" title="oro_windows_state" alt="" coords="993,3641,1197,3725">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/oro_organization.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="ca_letter.html" target="_top" title="ca_letter" alt="" coords="1007,172,1173,403">
+<area shape="rect" id="node2" href="oro_organization.html" target="_top" title="oro_organization" alt="" coords="5,2290,337,2533">
+<area shape="rect" id="node3" href="oro_user.html" target="_top" title="oro_user" alt="" coords="661,2349,897,2697">
+<area shape="rect" id="node6" href="oro_business_unit.html" target="_top" title="oro_business_unit" alt="" coords="381,1839,617,2011">
+<area shape="rect" id="node4" href="ca_phone_call.html" target="_top" title="ca_phone_call" alt="" coords="984,420,1196,651">
+<area shape="rect" id="node5" href="oro_access_group.html" target="_top" title="oro_access_group" alt="" coords="661,1373,897,1551">
+<area shape="rect" id="node7" href="oro_activity_list.html" target="_top" title="oro_activity_list" alt="" coords="983,1697,1197,2016">
+<area shape="rect" id="node8" href="oro_activity_owner.html" target="_top" title="oro_activity_owner" alt="" coords="1294,1639,1494,1818">
+<area shape="rect" id="node9" href="oro_attachment.html" target="_top" title="oro_attachment" alt="" coords="1000,668,1180,869">
+<area shape="rect" id="node10" href="oro_audit.html" target="_top" title="oro_audit" alt="" coords="1007,1201,1173,1491">
+<area shape="rect" id="node11" href="oro_calendar.html" target="_top" title="oro_calendar" alt="" coords="1007,1508,1173,1680">
+<area shape="rect" id="node12" href="oro_comment.html" target="_top" title="oro_comment" alt="" coords="1006,2033,1174,2235">
+<area shape="rect" id="node13" href="oro_dashboard.html" target="_top" title="oro_dashboard" alt="" coords="1001,3295,1179,3496">
+<area shape="rect" id="node14" href="oro_dashboard_active.html" target="_top" title="oro_dashboard_active" alt="" coords="1283,2543,1505,2722">
+<area shape="rect" id="node15" href="oro_email_mailbox.html" target="_top" title="oro_email_mailbox" alt="" coords="1292,4945,1496,5205">
+<area shape="rect" id="node16" href="oro_email_origin.html" target="_top" title="oro_email_origin" alt="" coords="969,5184,1211,5385">
+<area shape="rect" id="node17" href="oro_email_template.html" target="_top" title="oro_email_template" alt="" coords="987,2580,1193,2840">
+<area shape="rect" id="node18" href="oro_email_user.html" target="_top" title="oro_email_user" alt="" coords="1549,3619,1752,3879">
+<area shape="rect" id="node19" href="oro_embedded_form.html" target="_top" title="oro_embedded_form" alt="" coords="392,2385,607,2528">
+<area shape="rect" id="node20" href="oro_grid_view.html" target="_top" title="oro_grid_view" alt="" coords="1005,2857,1175,3029">
+<area shape="rect" id="node21" href="oro_integration_channel.html" target="_top" title="oro_integration_channel" alt="" coords="941,887,1239,1147">
+<area shape="rect" id="node22" href="oro_navigation_history.html" target="_top" title="oro_navigation_history" alt="" coords="977,3047,1203,3277">
+<area shape="rect" id="node23" href="oro_navigation_item.html" target="_top" title="oro_navigation_item" alt="" coords="985,3513,1195,3715">
+<area shape="rect" id="node24" href="oro_note.html" target="_top" title="oro_note" alt="" coords="988,2252,1192,2453">
+<area shape="rect" id="node25" href="oro_report.html" target="_top" title="oro_report" alt="" coords="661,1569,897,1800">
+<area shape="rect" id="node26" href="oro_segment.html" target="_top" title="oro_segment" alt="" coords="661,1855,897,2115">
+<area shape="rect" id="node27" href="oro_sidebar_widget.html" target="_top" title="oro_sidebar_widget" alt="" coords="987,3732,1193,3963">
+<area shape="rect" id="node28" href="oro_system_calendar.html" target="_top" title="oro_system_calendar" alt="" coords="390,3004,609,3176">
+<area shape="rect" id="node29" href="oro_tag_tag.html" target="_top" title="oro_tag_tag" alt="" coords="1007,3980,1173,4181">
+<area shape="rect" id="node30" href="oro_tracking_website.html" target="_top" title="oro_tracking_website" alt="" coords="982,4199,1198,4400">
+<area shape="rect" id="node31" href="oro_user_api.html" target="_top" title="oro_user_api" alt="" coords="1007,4418,1173,4597">
+<area shape="rect" id="node32" href="oro_user_organization.html" target="_top" title="oro_user_organization" alt="" coords="978,4614,1202,4734">
+<area shape="rect" id="node33" href="orocrm_task.html" target="_top" title="orocrm_task" alt="" coords="992,4752,1188,5129">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/oro_organization.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="ca_court.html" target="_top" title="ca_court" alt="" coords="710,4805,854,4889">
+<area shape="rect" id="node2" href="oro_business_unit.html" target="_top" title="oro_business_unit" alt="" coords="381,4740,617,4912">
+<area shape="rect" id="node6" href="oro_organization.html" target="_top" title="oro_organization" alt="" coords="5,2465,337,2707">
+<area shape="rect" id="node3" href="ca_letter.html" target="_top" title="ca_letter" alt="" coords="1012,1824,1179,2055">
+<area shape="rect" id="node4" href="ca_letter_status.html" target="_top" title="ca_letter_status" alt="" coords="691,1999,873,2083">
+<area shape="rect" id="node5" href="ca_letter_type.html" target="_top" title="ca_letter_type" alt="" coords="697,1860,867,1944">
+<area shape="rect" id="node7" href="oro_user.html" target="_top" title="oro_user" alt="" coords="664,3600,900,3948">
+<area shape="rect" id="node14" href="oro_attachment_file.html" target="_top" title="oro_attachment_file" alt="" coords="396,3909,603,3993">
+<area shape="rect" id="node81" href="oro_user_status.html" target="_top" title="oro_user_status" alt="" coords="408,3599,591,3683">
+<area shape="rect" id="node8" href="ca_phone_call.html" target="_top" title="ca_phone_call" alt="" coords="989,2072,1201,2303">
+<area shape="rect" id="node9" href="ca_phone_call_status.html" target="_top" title="ca_phone_call_status" alt="" coords="672,2259,892,2343">
+<area shape="rect" id="node10" href="ca_phone_call_type.html" target="_top" title="ca_phone_call_type" alt="" coords="678,2157,886,2241">
+<area shape="rect" id="node11" href="ca_risk_assessment.html" target="_top" title="ca_risk_assessment" alt="" coords="1373,4045,1583,4129">
+<area shape="rect" id="node12" href="ca_witness.html" target="_top" title="ca_witness" alt="" coords="1019,4912,1171,4996">
+<area shape="rect" id="node13" href="ca_trial.html" target="_top" title="ca_trial" alt="" coords="718,4944,846,5028">
+<area shape="rect" id="node15" href="ca_witness_attendance.html" target="_top" title="ca_witness_attendance" alt="" coords="1363,4315,1593,4399">
+<area shape="rect" id="node16" href="oro_access_group.html" target="_top" title="oro_access_group" alt="" coords="664,5553,900,5731">
+<area shape="rect" id="node17" href="oro_activity_list.html" target="_top" title="oro_activity_list" alt="" coords="988,2787,1203,3105">
+<area shape="rect" id="node18" href="oro_activity_owner.html" target="_top" title="oro_activity_owner" alt="" coords="1378,2750,1578,2929">
+<area shape="rect" id="node19" href="oro_attachment.html" target="_top" title="oro_attachment" alt="" coords="1005,4555,1185,4756">
+<area shape="rect" id="node20" href="oro_audit.html" target="_top" title="oro_audit" alt="" coords="1012,817,1179,1107">
+<area shape="rect" id="node21" href="oro_audit_field.html" target="_top" title="oro_audit_field" alt="" coords="1391,820,1565,904">
+<area shape="rect" id="node22" href="oro_calendar.html" target="_top" title="oro_calendar" alt="" coords="1012,1124,1179,1296">
+<area shape="rect" id="node23" href="oro_calendar_event.html" target="_top" title="oro_calendar_event" alt="" coords="1374,2648,1582,2732">
+<area shape="rect" id="node24" href="oro_system_calendar.html" target="_top" title="oro_system_calendar" alt="" coords="390,1703,609,1875">
+<area shape="rect" id="node25" href="oro_calendar_property.html" target="_top" title="oro_calendar_property" alt="" coords="1365,1127,1591,1211">
+<area shape="rect" id="node26" href="oro_comment.html" target="_top" title="oro_comment" alt="" coords="1011,2320,1179,2521">
+<area shape="rect" id="node27" href="oro_dashboard.html" target="_top" title="oro_dashboard" alt="" coords="1007,1313,1184,1515">
+<area shape="rect" id="node28" href="oro_dashboard_active.html" target="_top" title="oro_dashboard_active" alt="" coords="1367,1418,1589,1597">
+<area shape="rect" id="node29" href="oro_dashboard_widget.html" target="_top" title="oro_dashboard_widget" alt="" coords="1365,1316,1591,1400">
+<area shape="rect" id="node30" href="oro_dashboard_widget_state.html" target="_top" title="oro_dashboard_widget_state" alt="" coords="1719,1913,1985,1997">
+<area shape="rect" id="node31" href="oro_email.html" target="_top" title="oro_email" alt="" coords="2058,72,2201,156">
+<area shape="rect" id="node32" href="oro_email_address.html" target="_top" title="oro_email_address" alt="" coords="1751,4161,1953,4245">
+<area shape="rect" id="node33" href="oro_embedded_form.html" target="_top" title="oro_embedded_form" alt="" coords="675,105,889,248">
+<area shape="rect" id="node34" href="oro_email_mailbox.html" target="_top" title="oro_email_mailbox" alt="" coords="1376,5408,1580,5668">
+<area shape="rect" id="node39" href="oro_email_origin.html" target="_top" title="oro_email_origin" alt="" coords="975,6505,1216,6707">
+<area shape="rect" id="node40" href="oro_email_mailbox_process.html" target="_top" title="oro_email_mailbox_process" alt="" coords="965,5619,1225,5703">
+<area shape="rect" id="node35" href="oro_email_attachment.html" target="_top" title="oro_email_attachment" alt="" coords="984,241,1207,325">
+<area shape="rect" id="node36" href="oro_email_auto_response_rule.html" target="_top" title="oro_email_auto_response_rule" alt="" coords="1712,5167,1992,5251">
+<area shape="rect" id="node37" href="oro_email_template.html" target="_top" title="oro_email_template" alt="" coords="992,5203,1199,5463">
+<area shape="rect" id="node38" href="oro_email_folder.html" target="_top" title="oro_email_folder" alt="" coords="2036,6311,2223,6395">
+<area shape="rect" id="node41" href="oro_email_mailbox_roles.html" target="_top" title="oro_email_mailbox_roles" alt="" coords="1731,5411,1973,5495">
+<area shape="rect" id="node42" href="oro_email_mailbox_users.html" target="_top" title="oro_email_mailbox_users" alt="" coords="1729,3991,1975,4075">
+<area shape="rect" id="node43" href="oro_email_template_translation.html" target="_top" title="oro_email_template_translation" alt="" coords="1337,5205,1619,5289">
+<area shape="rect" id="node44" href="oro_email_user.html" target="_top" title="oro_email_user" alt="" coords="2267,3403,2469,3663">
+<area shape="rect" id="node45" href="oro_email_user_folders.html" target="_top" title="oro_email_user_folders" alt="" coords="2513,4413,2744,4497">
+<area shape="rect" id="node46" href="oro_entity_config_log.html" target="_top" title="oro_entity_config_log" alt="" coords="987,3451,1204,3535">
+<area shape="rect" id="node47" href="oro_grid_view.html" target="_top" title="oro_grid_view" alt="" coords="1011,5013,1180,5185">
+<area shape="rect" id="node48" href="oro_grid_view_user.html" target="_top" title="oro_grid_view_user" alt="" coords="1375,4573,1581,4657">
+<area shape="rect" id="node49" href="oro_integration_channel.html" target="_top" title="oro_integration_channel" alt="" coords="947,6724,1244,6984">
+<area shape="rect" id="node50" href="oro_integration_transport.html" target="_top" title="oro_integration_transport" alt="" coords="661,6785,903,6869">
+<area shape="rect" id="node51" href="oro_integration_channel_status.html" target="_top" title="oro_integration_channel_status" alt="" coords="1337,6727,1619,6811">
+<area shape="rect" id="node52" href="oro_navigation_history.html" target="_top" title="oro_navigation_history" alt="" coords="983,4307,1208,4537">
+<area shape="rect" id="node53" href="oro_navigation_item.html" target="_top" title="oro_navigation_item" alt="" coords="990,343,1201,544">
+<area shape="rect" id="node54" href="oro_navigation_item_pinbar.html" target="_top" title="oro_navigation_item_pinbar" alt="" coords="1349,345,1607,429">
+<area shape="rect" id="node55" href="oro_navigation_pagestate.html" target="_top" title="oro_navigation_pagestate" alt="" coords="972,3552,1219,3636">
+<area shape="rect" id="node56" href="oro_note.html" target="_top" title="oro_note" alt="" coords="993,3123,1197,3324">
+<area shape="rect" id="node57" href="oro_notification_email_notif.html" target="_top" title="oro_notification_email_notif" alt="" coords="1350,5307,1606,5391">
+<area shape="rect" id="node58" href="oro_notification_recip_group.html" target="_top" title="oro_notification_recip_group" alt="" coords="964,6069,1227,6153">
+<area shape="rect" id="node59" href="oro_notification_recip_user.html" target="_top" title="oro_notification_recip_user" alt="" coords="968,3653,1223,3737">
+<area shape="rect" id="node60" href="oro_rel_activitylist_witness_witness_7cc73eb9.html" target="_top" title="oro_rel_activitylist_witness_witness_7cc73eb9" alt="" coords="1288,3771,1668,3855">
+<area shape="rect" id="node61" href="oro_rel_letter_witness_witness_9c813ece.html" target="_top" title="oro_rel_letter_witness_witness_9c813ece" alt="" coords="1303,3112,1653,3196">
+<area shape="rect" id="node62" href="oro_rel_phonecall_witness_witness_9c813ece.html" target="_top" title="oro_rel_phonecall_witness_witness_9c813ece" alt="" coords="1288,3500,1668,3584">
+<area shape="rect" id="node63" href="oro_rel_task_witness_witness_9c813ece.html" target="_top" title="oro_rel_task_witness_witness_9c813ece" alt="" coords="1306,4989,1650,5073">
+<area shape="rect" id="node64" href="orocrm_task.html" target="_top" title="orocrm_task" alt="" coords="997,7001,1193,7379">
+<area shape="rect" id="node90" href="oro_workflow_item.html" target="_top" title="oro_workflow_item" alt="" coords="682,6976,882,7060">
+<area shape="rect" id="node91" href="oro_workflow_step.html" target="_top" title="oro_workflow_step" alt="" coords="399,6976,599,7060">
+<area shape="rect" id="node92" href="ca_task_status.html" target="_top" title="ca_task_status" alt="" coords="694,7353,870,7437">
+<area shape="rect" id="node93" href="orocrm_task_priority.html" target="_top" title="orocrm_task_priority" alt="" coords="677,7151,887,7235">
+<area shape="rect" id="node94" href="ca_task_type.html" target="_top" title="ca_task_type" alt="" coords="700,7252,864,7336">
+<area shape="rect" id="node65" href="oro_reminder.html" target="_top" title="oro_reminder" alt="" coords="1013,3755,1178,3839">
+<area shape="rect" id="node66" href="oro_report.html" target="_top" title="oro_report" alt="" coords="664,1503,900,1733">
+<area shape="rect" id="node67" href="oro_search_update.html" target="_top" title="oro_search_update" alt="" coords="397,1372,601,1456">
+<area shape="rect" id="node68" href="oro_report_type.html" target="_top" title="oro_report_type" alt="" coords="409,1601,590,1685">
+<area shape="rect" id="node69" href="oro_segment.html" target="_top" title="oro_segment" alt="" coords="664,1188,900,1448">
+<area shape="rect" id="node70" href="oro_segment_type.html" target="_top" title="oro_segment_type" alt="" coords="399,1271,599,1355">
+<area shape="rect" id="node71" href="oro_segment_snapshot.html" target="_top" title="oro_segment_snapshot" alt="" coords="980,140,1211,224">
+<area shape="rect" id="node72" href="oro_sidebar_state.html" target="_top" title="oro_sidebar_state" alt="" coords="997,3856,1193,3940">
+<area shape="rect" id="node73" href="oro_sidebar_widget.html" target="_top" title="oro_sidebar_widget" alt="" coords="992,5720,1199,5951">
+<area shape="rect" id="node74" href="oro_tag_tag.html" target="_top" title="oro_tag_tag" alt="" coords="1012,1532,1179,1733">
+<area shape="rect" id="node75" href="oro_tag_tagging.html" target="_top" title="oro_tag_tagging" alt="" coords="1386,2061,1570,2145">
+<area shape="rect" id="node76" href="oro_tracking_event.html" target="_top" title="oro_tracking_event" alt="" coords="1377,601,1579,685">
+<area shape="rect" id="node77" href="oro_tracking_website.html" target="_top" title="oro_tracking_website" alt="" coords="987,561,1203,763">
+<area shape="rect" id="node78" href="oro_tracking_event_dictionary.html" target="_top" title="oro_tracking_event_dictionary" alt="" coords="1341,703,1615,787">
+<area shape="rect" id="node79" href="oro_tracking_visit.html" target="_top" title="oro_tracking_visit" alt="" coords="1382,463,1574,547">
+<area shape="rect" id="node80" href="oro_tracking_visit_event.html" target="_top" title="oro_tracking_visit_event" alt="" coords="1734,565,1970,649">
+<area shape="rect" id="node82" href="oro_user_access_group.html" target="_top" title="oro_user_access_group" alt="" coords="977,5517,1213,5601">
+<area shape="rect" id="node83" href="oro_user_access_group_role.html" target="_top" title="oro_user_access_group_role" alt="" coords="961,5968,1229,6052">
+<area shape="rect" id="node84" href="oro_user_access_role.html" target="_top" title="oro_user_access_role" alt="" coords="984,3995,1207,4079">
+<area shape="rect" id="node85" href="oro_user_api.html" target="_top" title="oro_user_api" alt="" coords="1012,6171,1179,6350">
+<area shape="rect" id="node86" href="oro_user_business_unit.html" target="_top" title="oro_user_business_unit" alt="" coords="979,4773,1212,4857">
+<area shape="rect" id="node87" href="oro_user_email.html" target="_top" title="oro_user_email" alt="" coords="1006,4096,1185,4180">
+<area shape="rect" id="node88" href="oro_user_organization.html" target="_top" title="oro_user_organization" alt="" coords="983,6367,1207,6487">
+<area shape="rect" id="node89" href="oro_windows_state.html" target="_top" title="oro_windows_state" alt="" coords="993,2648,1197,2732">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/oro_organization.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

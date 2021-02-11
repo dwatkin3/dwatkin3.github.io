@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>oro_dashboard - bap_standard Database</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>bap_standard</b> Database</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>oro_dashboard</h1><p><span id="recordNumber">0</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title='Automatically updated by the database'>√</td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="oro_dashboard_active.dashboard_id references oro_dashboard.id via fk_oro_dashboard_active_dashboard_id"><a href='oro_dashboard_active.html'>oro_dashboard_active</a><span class='relatedKey'>.dashboard_id</span></td>
+                                                <td class="constraint detail">fk_oro_dashboard_active_dashboard_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_dashboard_widget.dashboard_id references oro_dashboard.id via fk_oro_dashboard_widget_dashboard_id"><a href='oro_dashboard_widget.html'>oro_dashboard_widget</a><span class='relatedKey'>.dashboard_id</span></td>
+                                                <td class="constraint detail">fk_oro_dashboard_widget_dashboard_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="organization_id">organization_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="oro_dashboard.organization_id references oro_organization.id via fk_oro_dashboard_organization_id"><a href='oro_organization.html'>oro_organization</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_oro_dashboard_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="user_owner_id">user_owner_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="oro_dashboard.user_owner_id references oro_user.id via fk_oro_dashboard_user_owner_id"><a href='oro_user.html'>oro_user</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_oro_dashboard_user_owner_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="name">name</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="label">label</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="is_default">is_default</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="createdat">createdat</span></td>
+                                    <td>DATETIME</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="updatedat">updatedat</span></td>
+                                    <td>DATETIME</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PRIMARY</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>dashboard_is_default_idx</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>is_default</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_df2802ef32c8a3de</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>organization_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_df2802ef9eb185f9</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>user_owner_id</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="oro_dashboard.html" target="_top" title="oro_dashboard" alt="" coords="516,33,777,334">
+<area shape="rect" id="node2" href="oro_organization.html" target="_top" title="oro_organization" alt="" coords="5,312,192,455">
+<area shape="rect" id="node3" href="oro_user.html" target="_top" title="oro_user" alt="" coords="236,388,472,736">
+<area shape="rect" id="node4" href="oro_dashboard_active.html" target="_top" title="oro_dashboard_active" alt="" coords="823,283,1046,462">
+<area shape="rect" id="node5" href="oro_dashboard_widget.html" target="_top" title="oro_dashboard_widget" alt="" coords="821,5,1048,148">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/oro_dashboard.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="ca_letter.html" target="_top" title="ca_letter" alt="" coords="838,276,973,360">
+<area shape="rect" id="node2" href="oro_organization.html" target="_top" title="oro_organization" alt="" coords="5,1173,192,1316">
+<area shape="rect" id="node3" href="oro_user.html" target="_top" title="oro_user" alt="" coords="495,2057,731,2405">
+<area shape="rect" id="node8" href="oro_business_unit.html" target="_top" title="oro_business_unit" alt="" coords="245,625,442,709">
+<area shape="rect" id="node12" href="oro_attachment_file.html" target="_top" title="oro_attachment_file" alt="" coords="240,2009,447,2093">
+<area shape="rect" id="node46" href="oro_user_status.html" target="_top" title="oro_user_status" alt="" coords="252,2148,435,2232">
+<area shape="rect" id="node4" href="ca_phone_call.html" target="_top" title="ca_phone_call" alt="" coords="819,653,991,737">
+<area shape="rect" id="node5" href="ca_risk_assessment.html" target="_top" title="ca_risk_assessment" alt="" coords="800,1756,1011,1840">
+<area shape="rect" id="node6" href="ca_witness_attendance.html" target="_top" title="ca_witness_attendance" alt="" coords="790,1857,1021,1941">
+<area shape="rect" id="node7" href="oro_access_group.html" target="_top" title="oro_access_group" alt="" coords="513,487,712,571">
+<area shape="rect" id="node9" href="oro_activity_list.html" target="_top" title="oro_activity_list" alt="" coords="816,755,995,839">
+<area shape="rect" id="node10" href="oro_activity_owner.html" target="_top" title="oro_activity_owner" alt="" coords="1093,755,1293,839">
+<area shape="rect" id="node11" href="oro_attachment.html" target="_top" title="oro_attachment" alt="" coords="815,1059,995,1143">
+<area shape="rect" id="node13" href="oro_audit.html" target="_top" title="oro_audit" alt="" coords="833,957,977,1041">
+<area shape="rect" id="node14" href="oro_calendar.html" target="_top" title="oro_calendar" alt="" coords="823,856,987,940">
+<area shape="rect" id="node15" href="oro_calendar_event.html" target="_top" title="oro_calendar_event" alt="" coords="1089,856,1297,940">
+<area shape="rect" id="node16" href="oro_system_calendar.html" target="_top" title="oro_system_calendar" alt="" coords="503,828,722,912">
+<area shape="rect" id="node17" href="oro_comment.html" target="_top" title="oro_comment" alt="" coords="821,1480,989,1564">
+<area shape="rect" id="node18" href="oro_dashboard.html" target="_top" title="oro_dashboard" alt="" coords="775,1161,1036,1462">
+<area shape="rect" id="node19" href="oro_dashboard_active.html" target="_top" title="oro_dashboard_active" alt="" coords="1082,1294,1305,1473">
+<area shape="rect" id="node20" href="oro_dashboard_widget.html" target="_top" title="oro_dashboard_widget" alt="" coords="1080,1133,1307,1276">
+<area shape="rect" id="node21" href="oro_dashboard_widget_state.html" target="_top" title="oro_dashboard_widget_state" alt="" coords="1351,1700,1617,1784">
+<area shape="rect" id="node22" href="oro_email_address.html" target="_top" title="oro_email_address" alt="" coords="1383,2464,1585,2548">
+<area shape="rect" id="node23" href="oro_email_mailbox.html" target="_top" title="oro_email_mailbox" alt="" coords="1093,2752,1294,2836">
+<area shape="rect" id="node24" href="oro_email_origin.html" target="_top" title="oro_email_origin" alt="" coords="812,3167,999,3251">
+<area shape="rect" id="node25" href="oro_email_mailbox_users.html" target="_top" title="oro_email_mailbox_users" alt="" coords="1361,2628,1607,2712">
+<area shape="rect" id="node26" href="oro_email_template.html" target="_top" title="oro_email_template" alt="" coords="802,3268,1009,3352">
+<area shape="rect" id="node27" href="oro_email_user.html" target="_top" title="oro_email_user" alt="" coords="1395,2913,1573,2997">
+<area shape="rect" id="node28" href="oro_embedded_form.html" target="_top" title="oro_embedded_form" alt="" coords="236,87,451,171">
+<area shape="rect" id="node29" href="oro_entity_config_log.html" target="_top" title="oro_entity_config_log" alt="" coords="797,2651,1014,2735">
+<area shape="rect" id="node30" href="oro_grid_view.html" target="_top" title="oro_grid_view" alt="" coords="821,3028,990,3112">
+<area shape="rect" id="node31" href="oro_grid_view_user.html" target="_top" title="oro_grid_view_user" alt="" coords="1091,2632,1296,2716">
+<area shape="rect" id="node32" href="oro_integration_channel.html" target="_top" title="oro_integration_channel" alt="" coords="787,175,1023,259">
+<area shape="rect" id="node33" href="oro_navigation_history.html" target="_top" title="oro_navigation_history" alt="" coords="793,3471,1018,3555">
+<area shape="rect" id="node34" href="oro_navigation_item.html" target="_top" title="oro_navigation_item" alt="" coords="800,3572,1011,3656">
+<area shape="rect" id="node35" href="oro_navigation_pagestate.html" target="_top" title="oro_navigation_pagestate" alt="" coords="782,2752,1029,2836">
+<area shape="rect" id="node36" href="oro_note.html" target="_top" title="oro_note" alt="" coords="837,2927,973,3011">
+<area shape="rect" id="node37" href="oro_notification_recip_user.html" target="_top" title="oro_notification_recip_user" alt="" coords="778,1655,1033,1739">
+<area shape="rect" id="node38" href="oro_reminder.html" target="_top" title="oro_reminder" alt="" coords="823,1959,988,2043">
+<area shape="rect" id="node39" href="oro_report.html" target="_top" title="oro_report" alt="" coords="540,625,685,709">
+<area shape="rect" id="node40" href="oro_segment.html" target="_top" title="oro_segment" alt="" coords="531,727,695,811">
+<area shape="rect" id="node41" href="oro_sidebar_state.html" target="_top" title="oro_sidebar_state" alt="" coords="807,2060,1003,2144">
+<area shape="rect" id="node42" href="oro_sidebar_widget.html" target="_top" title="oro_sidebar_widget" alt="" coords="802,3673,1009,3757">
+<area shape="rect" id="node43" href="oro_tag_tag.html" target="_top" title="oro_tag_tag" alt="" coords="827,3369,983,3453">
+<area shape="rect" id="node44" href="oro_tag_tagging.html" target="_top" title="oro_tag_tagging" alt="" coords="1101,3148,1285,3232">
+<area shape="rect" id="node45" href="oro_tracking_website.html" target="_top" title="oro_tracking_website" alt="" coords="797,3775,1013,3859">
+<area shape="rect" id="node47" href="oro_user_access_group.html" target="_top" title="oro_user_access_group" alt="" coords="787,451,1023,535">
+<area shape="rect" id="node48" href="oro_user_access_role.html" target="_top" title="oro_user_access_role" alt="" coords="794,2199,1017,2283">
+<area shape="rect" id="node49" href="oro_user_api.html" target="_top" title="oro_user_api" alt="" coords="823,3876,987,3960">
+<area shape="rect" id="node50" href="oro_user_business_unit.html" target="_top" title="oro_user_business_unit" alt="" coords="789,552,1022,636">
+<area shape="rect" id="node51" href="oro_user_email.html" target="_top" title="oro_user_email" alt="" coords="816,2337,995,2421">
+<area shape="rect" id="node52" href="oro_user_organization.html" target="_top" title="oro_user_organization" alt="" coords="793,3977,1017,4061">
+<area shape="rect" id="node53" href="oro_windows_state.html" target="_top" title="oro_windows_state" alt="" coords="803,2476,1007,2560">
+<area shape="rect" id="node54" href="orocrm_task.html" target="_top" title="orocrm_task" alt="" coords="826,73,985,157">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/oro_dashboard.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

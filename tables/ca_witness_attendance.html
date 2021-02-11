@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ca_witness_attendance - bap_standard Database</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>bap_standard</b> Database</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>ca_witness_attendance</h1><p><span id="recordNumber">13</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title='Automatically updated by the database'>√</td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="witness_id">witness_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness_attendance.witness_id references ca_witness.id via fk_ca_witness_attendance_witness_id"><a href='ca_witness.html'>ca_witness</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_attendance_witness_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dateDueInCourt">dateDueInCourt</span></td>
+                                    <td>DATETIME</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="arrivalTime">arrivalTime</span></td>
+                                    <td>TIME</td>
+                                    <td>8</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="hasAttended">hasAttended</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="hasGivenEvidence">hasGivenEvidence</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="leadWorker_id">leadWorker_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness_attendance.leadWorker_id references oro_user.id via fk_ca_witness_attendance_leadworker_id"><a href='oro_user.html'>oro_user</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_attendance_leadworker_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PRIMARY</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_A931A40E6D42FFF6</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>leadWorker_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_A931A40EF28D7E1C</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>witness_id</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="ca_witness_attendance.html" target="_top" title="ca_witness_attendance" alt="" coords="616,303,937,575">
+<area shape="rect" id="node2" href="oro_user.html" target="_top" title="oro_user" alt="" coords="171,811,407,1159">
+<area shape="rect" id="node3" href="ca_witness.html" target="_top" title="ca_witness" alt="" coords="5,5,572,793">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/ca_witness_attendance.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="ca_letter.html" target="_top" title="ca_letter" alt="" coords="1185,1887,1320,1971">
+<area shape="rect" id="node2" href="oro_organization.html" target="_top" title="oro_organization" alt="" coords="5,3511,192,3595">
+<area shape="rect" id="node3" href="oro_user.html" target="_top" title="oro_user" alt="" coords="588,3235,824,3583">
+<area shape="rect" id="node6" href="oro_attachment_file.html" target="_top" title="oro_attachment_file" alt="" coords="236,1767,443,1851">
+<area shape="rect" id="node13" href="oro_business_unit.html" target="_top" title="oro_business_unit" alt="" coords="241,931,438,1015">
+<area shape="rect" id="node68" href="oro_user_status.html" target="_top" title="oro_user_status" alt="" coords="248,3349,431,3433">
+<area shape="rect" id="node4" href="ca_phone_call.html" target="_top" title="ca_phone_call" alt="" coords="1167,1989,1339,2073">
+<area shape="rect" id="node5" href="ca_referral_in.html" target="_top" title="ca_referral_in" alt="" coords="1686,1087,1854,1171">
+<area shape="rect" id="node7" href="ca_witness.html" target="_top" title="ca_witness" alt="" coords="969,639,1536,1427">
+<area shape="rect" id="node12" href="ca_trial.html" target="_top" title="ca_trial" alt="" coords="642,117,770,201">
+<area shape="rect" id="node14" href="ca_address.html" target="_top" title="ca_address" alt="" coords="629,357,783,441">
+<area shape="rect" id="node15" href="ca_witness_confidence_level.html" target="_top" title="ca_witness_confidence_level" alt="" coords="572,1370,840,1454">
+<area shape="rect" id="node16" href="ca_witness_confidentiality_agreement_status.html" target="_top" title="ca_witness_confidentiality_agreement_status" alt="" coords="519,1167,893,1251">
+<area shape="rect" id="node17" href="ca_witness_consent_to_contact_for_research_status.html" target="_top" title="ca_witness_consent_to_contact_for_research_status" alt="" coords="494,1646,918,1730">
+<area shape="rect" id="node18" href="ca_witness_data_protection_consent_status.html" target="_top" title="ca_witness_data_protection_consent_status" alt="" coords="523,1066,889,1150">
+<area shape="rect" id="node19" href="ca_gender.html" target="_top" title="ca_gender" alt="" coords="633,458,779,542">
+<area shape="rect" id="node20" href="ca_witness_tailored_communication_status.html" target="_top" title="ca_witness_tailored_communication_status" alt="" coords="525,762,887,846">
+<area shape="rect" id="node21" href="ca_witness_given_young_witness_pack_status.html" target="_top" title="ca_witness_given_young_witness_pack_status" alt="" coords="513,863,899,947">
+<area shape="rect" id="node22" href="ca_initial_contact_source.html" target="_top" title="ca_initial_contact_source" alt="" coords="585,1269,827,1353">
+<area shape="rect" id="node23" href="ca_witness_aware_of_victims_code_entitlement_status.html" target="_top" title="ca_witness_aware_of_victims_code_entitlement_status" alt="" coords="487,661,925,745">
+<area shape="rect" id="node24" href="ca_witness_aware_of_witness_charter_status.html" target="_top" title="ca_witness_aware_of_witness_charter_status" alt="" coords="517,559,895,643">
+<area shape="rect" id="node25" href="ca_witness_viw_status.html" target="_top" title="ca_witness_viw_status" alt="" coords="593,1471,819,1555">
+<area shape="rect" id="node26" href="ca_service_offer_status.html" target="_top" title="ca_service_offer_status" alt="" coords="590,965,822,1049">
+<area shape="rect" id="node27" href="ca_witness_type.html" target="_top" title="ca_witness_type" alt="" coords="613,255,799,339">
+<area shape="rect" id="node8" href="ca_referral_out.html" target="_top" title="ca_referral_out" alt="" coords="1682,781,1858,865">
+<area shape="rect" id="node9" href="ca_reminder.html" target="_top" title="ca_reminder" alt="" coords="1690,882,1850,966">
+<area shape="rect" id="node10" href="ca_risk_assessment.html" target="_top" title="ca_risk_assessment" alt="" coords="1665,2225,1875,2309">
+<area shape="rect" id="node11" href="ca_special_measure.html" target="_top" title="ca_special_measure" alt="" coords="1664,983,1876,1067">
+<area shape="rect" id="node28" href="ca_witness_attendance.html" target="_top" title="ca_witness_attendance" alt="" coords="1609,1761,1931,2033">
+<area shape="rect" id="node29" href="ca_witness_lwac_status.html" target="_top" title="ca_witness_lwac_status" alt="" coords="1652,338,1888,422">
+<area shape="rect" id="node30" href="ca_witness_phone_contact_details.html" target="_top" title="ca_witness_phone_contact_details" alt="" coords="1617,439,1923,523">
+<area shape="rect" id="node31" href="ca_witness_view_type.html" target="_top" title="ca_witness_view_type" alt="" coords="1658,541,1882,625">
+<area shape="rect" id="node32" href="oro_activity_list.html" target="_top" title="oro_activity_list" alt="" coords="1163,2330,1342,2414">
+<area shape="rect" id="node33" href="oro_activity_owner.html" target="_top" title="oro_activity_owner" alt="" coords="1670,2330,1870,2414">
+<area shape="rect" id="node34" href="oro_attachment.html" target="_top" title="oro_attachment" alt="" coords="1163,1583,1343,1667">
+<area shape="rect" id="node35" href="oro_audit.html" target="_top" title="oro_audit" alt="" coords="1181,2229,1325,2313">
+<area shape="rect" id="node36" href="oro_calendar.html" target="_top" title="oro_calendar" alt="" coords="1171,2431,1335,2515">
+<area shape="rect" id="node37" href="oro_calendar_event.html" target="_top" title="oro_calendar_event" alt="" coords="1666,2431,1874,2515">
+<area shape="rect" id="node38" href="oro_comment.html" target="_top" title="oro_comment" alt="" coords="1169,4043,1337,4127">
+<area shape="rect" id="node39" href="oro_dashboard.html" target="_top" title="oro_dashboard" alt="" coords="1164,4449,1341,4533">
+<area shape="rect" id="node40" href="oro_dashboard_active.html" target="_top" title="oro_dashboard_active" alt="" coords="1659,4449,1881,4533">
+<area shape="rect" id="node41" href="oro_dashboard_widget_state.html" target="_top" title="oro_dashboard_widget_state" alt="" coords="1119,3187,1386,3271">
+<area shape="rect" id="node42" href="oro_email_address.html" target="_top" title="oro_email_address" alt="" coords="1151,3289,1354,3373">
+<area shape="rect" id="node43" href="oro_email_mailbox_users.html" target="_top" title="oro_email_mailbox_users" alt="" coords="1130,3390,1375,3474">
+<area shape="rect" id="node44" href="oro_email_origin.html" target="_top" title="oro_email_origin" alt="" coords="1159,4689,1346,4773">
+<area shape="rect" id="node45" href="oro_email_template.html" target="_top" title="oro_email_template" alt="" coords="1149,4550,1356,4634">
+<area shape="rect" id="node46" href="oro_email_user.html" target="_top" title="oro_email_user" alt="" coords="1681,4689,1859,4773">
+<area shape="rect" id="node47" href="oro_entity_config_log.html" target="_top" title="oro_entity_config_log" alt="" coords="1144,3529,1361,3613">
+<area shape="rect" id="node48" href="oro_grid_view.html" target="_top" title="oro_grid_view" alt="" coords="1168,4246,1337,4330">
+<area shape="rect" id="node49" href="oro_grid_view_user.html" target="_top" title="oro_grid_view_user" alt="" coords="1667,3626,1873,3710">
+<area shape="rect" id="node50" href="oro_integration_channel.html" target="_top" title="oro_integration_channel" alt="" coords="1135,43,1371,127">
+<area shape="rect" id="node51" href="oro_navigation_history.html" target="_top" title="oro_navigation_history" alt="" coords="1140,4790,1365,4874">
+<area shape="rect" id="node52" href="oro_navigation_item.html" target="_top" title="oro_navigation_item" alt="" coords="1147,4891,1358,4975">
+<area shape="rect" id="node53" href="oro_navigation_pagestate.html" target="_top" title="oro_navigation_pagestate" alt="" coords="1129,3630,1376,3714">
+<area shape="rect" id="node54" href="oro_note.html" target="_top" title="oro_note" alt="" coords="1185,4145,1321,4229">
+<area shape="rect" id="node55" href="oro_notification_recip_user.html" target="_top" title="oro_notification_recip_user" alt="" coords="1125,3731,1380,3815">
+<area shape="rect" id="node56" href="oro_rel_activitylist_witness_witness_7cc73eb9.html" target="_top" title="oro_rel_activitylist_witness_witness_7cc73eb9" alt="" coords="1580,1573,1960,1657">
+<area shape="rect" id="node57" href="oro_rel_calendarevent_witness_witness_9c813ece.html" target="_top" title="oro_rel_calendarevent_witness_witness_9c813ece" alt="" coords="2004,1570,2413,1654">
+<area shape="rect" id="node58" href="oro_rel_letter_witness_witness_9c813ece.html" target="_top" title="oro_rel_letter_witness_witness_9c813ece" alt="" coords="1595,1194,1945,1278">
+<area shape="rect" id="node59" href="oro_rel_phonecall_witness_witness_9c813ece.html" target="_top" title="oro_rel_phonecall_witness_witness_9c813ece" alt="" coords="1580,1306,1960,1390">
+<area shape="rect" id="node60" href="oro_rel_task_witness_witness_9c813ece.html" target="_top" title="oro_rel_task_witness_witness_9c813ece" alt="" coords="1598,1429,1942,1513">
+<area shape="rect" id="node61" href="orocrm_task.html" target="_top" title="orocrm_task" alt="" coords="1173,2090,1332,2174">
+<area shape="rect" id="node62" href="oro_reminder.html" target="_top" title="oro_reminder" alt="" coords="1170,3833,1335,3917">
+<area shape="rect" id="node63" href="oro_sidebar_state.html" target="_top" title="oro_sidebar_state" alt="" coords="1155,2606,1351,2690">
+<area shape="rect" id="node64" href="oro_sidebar_widget.html" target="_top" title="oro_sidebar_widget" alt="" coords="1149,4993,1356,5077">
+<area shape="rect" id="node65" href="oro_tag_tag.html" target="_top" title="oro_tag_tag" alt="" coords="1175,4347,1331,4431">
+<area shape="rect" id="node66" href="oro_tag_tagging.html" target="_top" title="oro_tag_tagging" alt="" coords="1678,4122,1862,4206">
+<area shape="rect" id="node67" href="oro_tracking_website.html" target="_top" title="oro_tracking_website" alt="" coords="1145,5094,1361,5178">
+<area shape="rect" id="node69" href="oro_user_access_group.html" target="_top" title="oro_user_access_group" alt="" coords="1135,2745,1371,2829">
+<area shape="rect" id="node70" href="oro_user_access_role.html" target="_top" title="oro_user_access_role" alt="" coords="1141,2846,1364,2930">
+<area shape="rect" id="node71" href="oro_user_api.html" target="_top" title="oro_user_api" alt="" coords="1171,1685,1335,1769">
+<area shape="rect" id="node72" href="oro_user_business_unit.html" target="_top" title="oro_user_business_unit" alt="" coords="1136,1482,1369,1566">
+<area shape="rect" id="node73" href="oro_user_email.html" target="_top" title="oro_user_email" alt="" coords="1163,2947,1342,3031">
+<area shape="rect" id="node74" href="oro_user_organization.html" target="_top" title="oro_user_organization" alt="" coords="1141,1786,1365,1870">
+<area shape="rect" id="node75" href="oro_windows_state.html" target="_top" title="oro_windows_state" alt="" coords="1151,3049,1355,3133">
+<area shape="rect" id="node76" href="users_phonenumbers.html" target="_top" title="users_phonenumbers" alt="" coords="1660,642,1880,726">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/ca_witness_attendance.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>orocrm_task - bap_standard Database</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>bap_standard</b> Database</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>orocrm_task</h1><p><span id="recordNumber">8</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title='Automatically updated by the database'>√</td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="oro_rel_task_witness_witness_9c813ece.task_id references orocrm_task.id via fk_oro_rel_task_witness_witness_9c813ece_task_id"><a href='oro_rel_task_witness_witness_9c813ece.html'>oro_rel_task_witness_witness_9c813ece</a><span class='relatedKey'>.task_id</span></td>
+                                                <td class="constraint detail">fk_oro_rel_task_witness_witness_9c813ece_task_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="workflow_item_id">workflow_item_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="orocrm_task.workflow_item_id references oro_workflow_item.id via fk_orocrm_task_workflow_item_id"><a href='oro_workflow_item.html'>oro_workflow_item</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_orocrm_task_workflow_item_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="organization_id">organization_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="orocrm_task.organization_id references oro_organization.id via fk_orocrm_task_organization_id"><a href='oro_organization.html'>oro_organization</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_orocrm_task_organization_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="workflow_step_id">workflow_step_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="orocrm_task.workflow_step_id references oro_workflow_step.id via fk_orocrm_task_workflow_step_id"><a href='oro_workflow_step.html'>oro_workflow_step</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_orocrm_task_workflow_step_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="owner_id">owner_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="orocrm_task.owner_id references oro_user.id via fk_orocrm_task_owner_id"><a href='oro_user.html'>oro_user</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_orocrm_task_owner_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="task_priority_name">task_priority_name</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>32</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="orocrm_task.task_priority_name references orocrm_task_priority.name via fk_orocrm_task_task_priority_name"><a href='orocrm_task_priority.html'>orocrm_task_priority</a><span class='relatedKey'>.name</span></td>
+                                                <td class="constraint detail">fk_orocrm_task_task_priority_name<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="subject">subject</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="description">description</span></td>
+                                    <td>LONGTEXT</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="due_date">due_date</span></td>
+                                    <td>DATETIME</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="createdAt">createdAt</span></td>
+                                    <td>DATETIME</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="updatedAt">updatedAt</span></td>
+                                    <td>DATETIME</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="type_id">type_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="orocrm_task.type_id references ca_task_type.id via fk_orocrm_task_type_id"><a href='ca_task_type.html'>ca_task_type</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_orocrm_task_type_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="status_id">status_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="orocrm_task.status_id references ca_task_status.id via fk_orocrm_task_status_id"><a href='ca_task_status.html'>ca_task_status</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_orocrm_task_status_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="isAnonymised">isAnonymised</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PRIMARY</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_814DEE3F32C8A3DE</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>organization_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_814DEE3F71FE882C</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>workflow_step_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_814DEE3F7E3C61F9</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>owner_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_814DEE3FD34C1E8E</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>task_priority_name</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_orocrm_task_status_id</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>status_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_orocrm_task_type_id</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>type_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>task_due_date_idx</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>due_date</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>task_updated_at_idx</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>updatedAt</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> UNIQ_814DEE3F1023C4EE</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>workflow_item_id</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="oro_rel_task_witness_witness_9c813ece.html" target="_top" title="oro_rel_task_witness_witness_9c813ece" alt="" coords="923,181,1281,301">
+<area shape="rect" id="node2" href="orocrm_task.html" target="_top" title="orocrm_task" alt="" coords="529,178,879,655">
+<area shape="rect" id="node3" href="oro_user.html" target="_top" title="oro_user" alt="" coords="249,297,485,645">
+<area shape="rect" id="node4" href="oro_organization.html" target="_top" title="oro_organization" alt="" coords="12,305,199,448">
+<area shape="rect" id="node5" href="oro_workflow_item.html" target="_top" title="oro_workflow_item" alt="" coords="267,5,467,207">
+<area shape="rect" id="node6" href="oro_workflow_step.html" target="_top" title="oro_workflow_step" alt="" coords="5,91,205,263">
+<area shape="rect" id="node7" href="ca_task_status.html" target="_top" title="ca_task_status" alt="" coords="279,953,455,1067">
+<area shape="rect" id="node8" href="orocrm_task_priority.html" target="_top" title="orocrm_task_priority" alt="" coords="262,663,473,805">
+<area shape="rect" id="node9" href="ca_task_type.html" target="_top" title="ca_task_type" alt="" coords="285,823,449,936">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/orocrm_task.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="ca_letter.html" target="_top" title="ca_letter" alt="" coords="930,1125,1065,1209">
+<area shape="rect" id="node2" href="oro_organization.html" target="_top" title="oro_organization" alt="" coords="27,3245,214,3388">
+<area shape="rect" id="node3" href="oro_user.html" target="_top" title="oro_user" alt="" coords="543,2588,779,2936">
+<area shape="rect" id="node7" href="oro_business_unit.html" target="_top" title="oro_business_unit" alt="" coords="291,1908,488,1992">
+<area shape="rect" id="node8" href="oro_attachment_file.html" target="_top" title="oro_attachment_file" alt="" coords="286,1728,493,1812">
+<area shape="rect" id="node48" href="oro_user_status.html" target="_top" title="oro_user_status" alt="" coords="298,2635,481,2719">
+<area shape="rect" id="node4" href="ca_phone_call.html" target="_top" title="ca_phone_call" alt="" coords="911,3484,1083,3568">
+<area shape="rect" id="node5" href="ca_risk_assessment.html" target="_top" title="ca_risk_assessment" alt="" coords="892,1568,1103,1652">
+<area shape="rect" id="node6" href="ca_witness.html" target="_top" title="ca_witness" alt="" coords="585,1669,737,1753">
+<area shape="rect" id="node9" href="ca_witness_attendance.html" target="_top" title="ca_witness_attendance" alt="" coords="882,1669,1113,1753">
+<area shape="rect" id="node10" href="oro_access_group.html" target="_top" title="oro_access_group" alt="" coords="561,1771,760,1855">
+<area shape="rect" id="node11" href="oro_activity_list.html" target="_top" title="oro_activity_list" alt="" coords="908,3180,1087,3264">
+<area shape="rect" id="node12" href="oro_activity_owner.html" target="_top" title="oro_activity_owner" alt="" coords="1295,1973,1495,2057">
+<area shape="rect" id="node13" href="oro_attachment.html" target="_top" title="oro_attachment" alt="" coords="907,784,1087,868">
+<area shape="rect" id="node14" href="oro_audit.html" target="_top" title="oro_audit" alt="" coords="925,3788,1069,3872">
+<area shape="rect" id="node15" href="oro_calendar.html" target="_top" title="oro_calendar" alt="" coords="915,3687,1079,3771">
+<area shape="rect" id="node16" href="oro_calendar_event.html" target="_top" title="oro_calendar_event" alt="" coords="1291,3687,1499,3771">
+<area shape="rect" id="node17" href="oro_system_calendar.html" target="_top" title="oro_system_calendar" alt="" coords="280,3839,499,3923">
+<area shape="rect" id="node18" href="oro_comment.html" target="_top" title="oro_comment" alt="" coords="913,3281,1081,3365">
+<area shape="rect" id="node19" href="oro_dashboard.html" target="_top" title="oro_dashboard" alt="" coords="909,3927,1086,4011">
+<area shape="rect" id="node20" href="oro_dashboard_active.html" target="_top" title="oro_dashboard_active" alt="" coords="1284,3927,1507,4011">
+<area shape="rect" id="node21" href="oro_dashboard_widget_state.html" target="_top" title="oro_dashboard_widget_state" alt="" coords="864,2969,1131,3053">
+<area shape="rect" id="node22" href="oro_email_address.html" target="_top" title="oro_email_address" alt="" coords="1640,3276,1843,3360">
+<area shape="rect" id="node23" href="oro_email_mailbox.html" target="_top" title="oro_email_mailbox" alt="" coords="1295,4064,1496,4148">
+<area shape="rect" id="node24" href="oro_email_origin.html" target="_top" title="oro_email_origin" alt="" coords="904,4129,1091,4213">
+<area shape="rect" id="node25" href="oro_email_mailbox_users.html" target="_top" title="oro_email_mailbox_users" alt="" coords="1619,2644,1864,2728">
+<area shape="rect" id="node26" href="oro_email_template.html" target="_top" title="oro_email_template" alt="" coords="894,4028,1101,4112">
+<area shape="rect" id="node27" href="oro_email_user.html" target="_top" title="oro_email_user" alt="" coords="1652,4097,1831,4181">
+<area shape="rect" id="node28" href="oro_embedded_form.html" target="_top" title="oro_embedded_form" alt="" coords="282,1627,497,1711">
+<area shape="rect" id="node29" href="oro_entity_config_log.html" target="_top" title="oro_entity_config_log" alt="" coords="889,2047,1106,2131">
+<area shape="rect" id="node30" href="oro_grid_view.html" target="_top" title="oro_grid_view" alt="" coords="913,3585,1082,3669">
+<area shape="rect" id="node31" href="oro_grid_view_user.html" target="_top" title="oro_grid_view_user" alt="" coords="1293,2932,1498,3016">
+<area shape="rect" id="node32" href="oro_integration_channel.html" target="_top" title="oro_integration_channel" alt="" coords="879,1429,1115,1513">
+<area shape="rect" id="node33" href="oro_navigation_history.html" target="_top" title="oro_navigation_history" alt="" coords="885,4231,1110,4315">
+<area shape="rect" id="node34" href="oro_navigation_item.html" target="_top" title="oro_navigation_item" alt="" coords="892,4332,1103,4416">
+<area shape="rect" id="node35" href="oro_navigation_pagestate.html" target="_top" title="oro_navigation_pagestate" alt="" coords="874,2185,1121,2269">
+<area shape="rect" id="node36" href="oro_note.html" target="_top" title="oro_note" alt="" coords="929,3383,1065,3467">
+<area shape="rect" id="node37" href="oro_notification_recip_user.html" target="_top" title="oro_notification_recip_user" alt="" coords="870,2287,1125,2371">
+<area shape="rect" id="node38" href="oro_rel_task_witness_witness_9c813ece.html" target="_top" title="oro_rel_task_witness_witness_9c813ece" alt="" coords="1216,573,1575,693">
+<area shape="rect" id="node39" href="orocrm_task.html" target="_top" title="orocrm_task" alt="" coords="823,289,1172,766">
+<area shape="rect" id="node57" href="oro_workflow_step.html" target="_top" title="oro_workflow_step" alt="" coords="289,77,489,249">
+<area shape="rect" id="node60" href="oro_workflow_item.html" target="_top" title="oro_workflow_item" alt="" coords="561,161,761,363">
+<area shape="rect" id="node62" href="ca_task_status.html" target="_top" title="ca_task_status" alt="" coords="573,744,749,857">
+<area shape="rect" id="node63" href="orocrm_task_priority.html" target="_top" title="orocrm_task_priority" alt="" coords="555,453,766,596">
+<area shape="rect" id="node64" href="ca_task_type.html" target="_top" title="ca_task_type" alt="" coords="579,613,743,727">
+<area shape="rect" id="node40" href="oro_reminder.html" target="_top" title="oro_reminder" alt="" coords="915,2388,1080,2472">
+<area shape="rect" id="node41" href="oro_report.html" target="_top" title="oro_report" alt="" coords="588,1945,733,2029">
+<area shape="rect" id="node42" href="oro_segment.html" target="_top" title="oro_segment" alt="" coords="579,2047,743,2131">
+<area shape="rect" id="node43" href="oro_sidebar_state.html" target="_top" title="oro_sidebar_state" alt="" coords="899,2489,1095,2573">
+<area shape="rect" id="node44" href="oro_sidebar_widget.html" target="_top" title="oro_sidebar_widget" alt="" coords="894,4433,1101,4517">
+<area shape="rect" id="node45" href="oro_tag_tag.html" target="_top" title="oro_tag_tag" alt="" coords="919,923,1075,1007">
+<area shape="rect" id="node46" href="oro_tag_tagging.html" target="_top" title="oro_tag_tagging" alt="" coords="1303,1168,1487,1252">
+<area shape="rect" id="node47" href="oro_tracking_website.html" target="_top" title="oro_tracking_website" alt="" coords="889,1024,1105,1108">
+<area shape="rect" id="node49" href="oro_user_access_group.html" target="_top" title="oro_user_access_group" alt="" coords="879,1771,1115,1855">
+<area shape="rect" id="node50" href="oro_user_access_role.html" target="_top" title="oro_user_access_role" alt="" coords="886,2628,1109,2712">
+<area shape="rect" id="node51" href="oro_user_api.html" target="_top" title="oro_user_api" alt="" coords="915,1227,1079,1311">
+<area shape="rect" id="node52" href="oro_user_business_unit.html" target="_top" title="oro_user_business_unit" alt="" coords="881,1872,1114,1956">
+<area shape="rect" id="node53" href="oro_user_email.html" target="_top" title="oro_user_email" alt="" coords="908,2729,1087,2813">
+<area shape="rect" id="node54" href="oro_user_organization.html" target="_top" title="oro_user_organization" alt="" coords="885,1328,1109,1412">
+<area shape="rect" id="node55" href="oro_windows_state.html" target="_top" title="oro_windows_state" alt="" coords="895,2831,1099,2915">
+<area shape="rect" id="node56" href="oro_workflow_definition.html" target="_top" title="oro_workflow_definition" alt="" coords="5,95,236,179">
+<area shape="rect" id="node58" href="oro_workflow_entity_acl.html" target="_top" title="oro_workflow_entity_acl" alt="" coords="543,5,778,89">
+<area shape="rect" id="node59" href="oro_workflow_entity_acl_ident.html" target="_top" title="oro_workflow_entity_acl_ident" alt="" coords="860,5,1135,89">
+<area shape="rect" id="node61" href="oro_workflow_transition_log.html" target="_top" title="oro_workflow_transition_log" alt="" coords="867,107,1127,191">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/orocrm_task.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

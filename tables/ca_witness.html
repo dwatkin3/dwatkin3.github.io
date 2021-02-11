@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ca_witness - bap_standard Database</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>bap_standard</b> Database</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>ca_witness</h1><p><span id="recordNumber">12</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title='Automatically updated by the database'>√</td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_referral_in.witness_id references ca_witness.id via fk_ca_referral_in_witness_id"><a href='ca_referral_in.html'>ca_referral_in</a><span class='relatedKey'>.witness_id</span></td>
+                                                <td class="constraint detail">fk_ca_referral_in_witness_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ca_referral_out.witness_id references ca_witness.id via fk_ca_referral_out_witness_id"><a href='ca_referral_out.html'>ca_referral_out</a><span class='relatedKey'>.witness_id</span></td>
+                                                <td class="constraint detail">fk_ca_referral_out_witness_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ca_reminder.witness_id references ca_witness.id via fk_ca_reminder_witness_id"><a href='ca_reminder.html'>ca_reminder</a><span class='relatedKey'>.witness_id</span></td>
+                                                <td class="constraint detail">fk_ca_reminder_witness_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ca_risk_assessment.witness_id references ca_witness.id via fk_ca_risk_assessment_witness_id"><a href='ca_risk_assessment.html'>ca_risk_assessment</a><span class='relatedKey'>.witness_id</span></td>
+                                                <td class="constraint detail">fk_ca_risk_assessment_witness_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ca_special_measure.witness_id references ca_witness.id via fk_ca_special_measure_witness_id"><a href='ca_special_measure.html'>ca_special_measure</a><span class='relatedKey'>.witness_id</span></td>
+                                                <td class="constraint detail">fk_ca_special_measure_witness_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ca_witness_attendance.witness_id references ca_witness.id via fk_ca_witness_attendance_witness_id"><a href='ca_witness_attendance.html'>ca_witness_attendance</a><span class='relatedKey'>.witness_id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_attendance_witness_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ca_witness_lwac_status.witness_id references ca_witness.id via fk_ca_witness_lwac_status_witness_id"><a href='ca_witness_lwac_status.html'>ca_witness_lwac_status</a><span class='relatedKey'>.witness_id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_lwac_status_witness_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ca_witness_phone_contact_details.witnessId references ca_witness.id via fk_ca_witness_phone_contact_details_witnessid"><a href='ca_witness_phone_contact_details.html'>ca_witness_phone_contact_details</a><span class='relatedKey'>.witnessId</span></td>
+                                                <td class="constraint detail">fk_ca_witness_phone_contact_details_witnessid<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ca_witness_view_type.witness_id references ca_witness.id via fk_ca_witness_view_type_witness_id"><a href='ca_witness_view_type.html'>ca_witness_view_type</a><span class='relatedKey'>.witness_id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_view_type_witness_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_rel_activitylist_witness_witness_7cc73eb9.witness_id references ca_witness.id via fk_oro_rel_activitylist_witness_witness_7cc73eb9_witness_id"><a href='oro_rel_activitylist_witness_witness_7cc73eb9.html'>oro_rel_activitylist_witness_witness_7cc73eb9</a><span class='relatedKey'>.witness_id</span></td>
+                                                <td class="constraint detail">fk_oro_rel_activitylist_witness_witness_7cc73eb9_witness_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_rel_calendarevent_witness_witness_9c813ece.witness_id references ca_witness.id via fk_oro_rel_calendarevent_witness_witness_9c813ece_witness_id"><a href='oro_rel_calendarevent_witness_witness_9c813ece.html'>oro_rel_calendarevent_witness_witness_9c813ece</a><span class='relatedKey'>.witness_id</span></td>
+                                                <td class="constraint detail">fk_oro_rel_calendarevent_witness_witness_9c813ece_witness_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_rel_letter_witness_witness_9c813ece.witness_id references ca_witness.id via fk_oro_rel_letter_witness_witness_9c813ece_witness_id"><a href='oro_rel_letter_witness_witness_9c813ece.html'>oro_rel_letter_witness_witness_9c813ece</a><span class='relatedKey'>.witness_id</span></td>
+                                                <td class="constraint detail">fk_oro_rel_letter_witness_witness_9c813ece_witness_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_rel_phonecall_witness_witness_9c813ece.witness_id references ca_witness.id via fk_oro_rel_phonecall_witness_witness_9c813ece_witness_id"><a href='oro_rel_phonecall_witness_witness_9c813ece.html'>oro_rel_phonecall_witness_witness_9c813ece</a><span class='relatedKey'>.witness_id</span></td>
+                                                <td class="constraint detail">fk_oro_rel_phonecall_witness_witness_9c813ece_witness_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="oro_rel_task_witness_witness_9c813ece.witness_id references ca_witness.id via fk_oro_rel_task_witness_witness_9c813ece_witness_id"><a href='oro_rel_task_witness_witness_9c813ece.html'>oro_rel_task_witness_witness_9c813ece</a><span class='relatedKey'>.witness_id</span></td>
+                                                <td class="constraint detail">fk_oro_rel_task_witness_witness_9c813ece_witness_id<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="users_phonenumbers.witnessId references ca_witness.id via fk_users_phonenumbers_witnessid"><a href='users_phonenumbers.html'>users_phonenumbers</a><span class='relatedKey'>.witnessId</span></td>
+                                                <td class="constraint detail">fk_users_phonenumbers_witnessid<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="trial_id">trial_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.trial_id references ca_trial.id via fk_ca_witness_trial_id"><a href='ca_trial.html'>ca_trial</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_trial_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="business_unit_owner_id">business_unit_owner_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.business_unit_owner_id references oro_business_unit.id via fk_ca_witness_business_unit_owner_id"><a href='oro_business_unit.html'>oro_business_unit</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_business_unit_owner_id<span title='Null on delete:&#10;Foreign key to parent set to NULL when parent deleted'>N</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="trial_type_id">trial_type_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.trial_type_id references ca_witness_type.id via fk_ca_witness_trial_type_id"><a href='ca_witness_type.html'>ca_witness_type</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_trial_type_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="address_id">address_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.address_id references ca_address.id via fk_ca_witness_address_id"><a href='ca_address.html'>ca_address</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_address_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="title">title</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="firstName">firstName</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="lastName">lastName</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dateOfBirth">dateOfBirth</span></td>
+                                    <td>DATE</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="riskAssessmentDocumentLink">riskAssessmentDocumentLink</span></td>
+                                    <td>LONGTEXT</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="emailAddress">emailAddress</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="contactNotes">contactNotes</span></td>
+                                    <td>LONGTEXT</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="notes">notes</span></td>
+                                    <td>LONGTEXT</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="requiresSupportInWelsh">requiresSupportInWelsh</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="requiresVPS">requiresVPS</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="numberOfFriendsAndFamily">numberOfFriendsAndFamily</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="numberOfProfessionalSupports">numberOfProfessionalSupports</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="requiresUseOfNonPublicEntrance">requiresUseOfNonPublicEntrance</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="isSentencingExplained">isSentencingExplained</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="isInitialContactSuccessful">isInitialContactSuccessful</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="hasIdentifiedNeedToRefreshMemory">hasIdentifiedNeedToRefreshMemory</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="hasDedicatedSupporterAtCourt">hasDedicatedSupporterAtCourt</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="wasInitialContactMadeByPost">wasInitialContactMadeByPost</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="anonWitnessIdentifier">anonWitnessIdentifier</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="isStillRequiredForEvidence">isStillRequiredForEvidence</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="isReturningForSentencingSupport">isReturningForSentencingSupport</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="wasFirstContactTooLateForPreTrialPreparation">wasFirstContactTooLateForPreTrialPreparation</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dateConsentedToStoreDataUnderDP">dateConsentedToStoreDataUnderDP</span></td>
+                                    <td>DATE</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dateAgreedToConfidentialityAgreement">dateAgreedToConfidentialityAgreement</span></td>
+                                    <td>DATE</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="hasConsentedToAutomatedReminders">hasConsentedToAutomatedReminders</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="haveExplainedConfidentialityForBroachingTheSubject">haveExplainedConfidentialityForBroachingTheSubject</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="created_at">created_at</span></td>
+                                    <td>DATETIME</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="updated_at">updated_at</span></td>
+                                    <td>DATETIME</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="genderId">genderId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.genderId references ca_gender.id via fk_ca_witness_genderid"><a href='ca_gender.html'>ca_gender</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_genderid<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="isAwareOfWitnessCharterEntitlementBeforeExplainedByWSStaff_id">isAwareOfWitnessCharterEntitlementBeforeExplainedByWSStaff_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.isAwareOfWitnessCharterEntitlementBeforeExplainedByWSStaff_id references ca_witness_aware_of_witness_charter_status.id via FK_4CD9D6F8668C0829"><a href='ca_witness_aware_of_witness_charter_status.html'>ca_witness_aware_of_witness_charter_status</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">FK_4CD9D6F8668C0829<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="isAwareOfVictimsCodeEntitlementBeforeExplainedByWSStaff_id">isAwareOfVictimsCodeEntitlementBeforeExplainedByWSStaff_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.isAwareOfVictimsCodeEntitlementBeforeExplainedByWSStaff_id references ca_witness_aware_of_victims_code_entitlement_status.id via FK_4CD9D6F8575BC9B6"><a href='ca_witness_aware_of_victims_code_entitlement_status.html'>ca_witness_aware_of_victims_code_entitlement_status</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">FK_4CD9D6F8575BC9B6<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="hasReceivedTailoredCommunicationToMeetTheirSpecifiedNeeds_id">hasReceivedTailoredCommunicationToMeetTheirSpecifiedNeeds_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.hasReceivedTailoredCommunicationToMeetTheirSpecifiedNeeds_id references ca_witness_tailored_communication_status.id via FK_4CD9D6F8C12AF0FC"><a href='ca_witness_tailored_communication_status.html'>ca_witness_tailored_communication_status</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">FK_4CD9D6F8C12AF0FC<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="hasSentAYoungWitnessPack_id">hasSentAYoungWitnessPack_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.hasSentAYoungWitnessPack_id references ca_witness_given_young_witness_pack_status.id via fk_ca_witness_hassentayoungwitnesspack_id"><a href='ca_witness_given_young_witness_pack_status.html'>ca_witness_given_young_witness_pack_status</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_hassentayoungwitnesspack_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="offeredPTVByPhoneStatus_id">offeredPTVByPhoneStatus_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.offeredPTVByPhoneStatus_id references ca_service_offer_status.id via fk_ca_witness_offeredptvbyphonestatus_id"><a href='ca_service_offer_status.html'>ca_service_offer_status</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_offeredptvbyphonestatus_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="offeredPTVAtCourtStatus_id">offeredPTVAtCourtStatus_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.offeredPTVAtCourtStatus_id references ca_service_offer_status.id via fk_ca_witness_offeredptvatcourtstatus_id"><a href='ca_service_offer_status.html'>ca_service_offer_status</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_offeredptvatcourtstatus_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="offeredSupportByPhoneStatus_id">offeredSupportByPhoneStatus_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.offeredSupportByPhoneStatus_id references ca_service_offer_status.id via fk_ca_witness_offeredsupportbyphonestatus_id"><a href='ca_service_offer_status.html'>ca_service_offer_status</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_offeredsupportbyphonestatus_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="offeredOutreachStatus_id">offeredOutreachStatus_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.offeredOutreachStatus_id references ca_service_offer_status.id via fk_ca_witness_offeredoutreachstatus_id"><a href='ca_service_offer_status.html'>ca_service_offer_status</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_offeredoutreachstatus_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="dataProtectionConsentStatus_id">dataProtectionConsentStatus_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.dataProtectionConsentStatus_id references ca_witness_data_protection_consent_status.id via fk_ca_witness_dataprotectionconsentstatus_id"><a href='ca_witness_data_protection_consent_status.html'>ca_witness_data_protection_consent_status</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_dataprotectionconsentstatus_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="confidentialityAgreementStatus_id">confidentialityAgreementStatus_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.confidentialityAgreementStatus_id references ca_witness_confidentiality_agreement_status.id via fk_ca_witness_confidentialityagreementstatus_id"><a href='ca_witness_confidentiality_agreement_status.html'>ca_witness_confidentiality_agreement_status</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_confidentialityagreementstatus_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="initialContactSource_id">initialContactSource_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.initialContactSource_id references ca_initial_contact_source.id via fk_ca_witness_initialcontactsource_id"><a href='ca_initial_contact_source.html'>ca_initial_contact_source</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_initialcontactsource_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="givingEvidenceConfidenceLevel_id">givingEvidenceConfidenceLevel_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.givingEvidenceConfidenceLevel_id references ca_witness_confidence_level.id via fk_ca_witness_givingevidenceconfidencelevel_id"><a href='ca_witness_confidence_level.html'>ca_witness_confidence_level</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_givingevidenceconfidencelevel_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="understandingConfidenceLevel_id">understandingConfidenceLevel_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.understandingConfidenceLevel_id references ca_witness_confidence_level.id via fk_ca_witness_understandingconfidencelevel_id"><a href='ca_witness_confidence_level.html'>ca_witness_confidence_level</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_understandingconfidencelevel_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="comfortConfidenceLevel_id">comfortConfidenceLevel_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.comfortConfidenceLevel_id references ca_witness_confidence_level.id via fk_ca_witness_comfortconfidencelevel_id"><a href='ca_witness_confidence_level.html'>ca_witness_confidence_level</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_comfortconfidencelevel_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="isViw_id">isViw_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.isViw_id references ca_witness_viw_status.id via fk_ca_witness_isviw_id"><a href='ca_witness_viw_status.html'>ca_witness_viw_status</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_isviw_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="riskAssessmentDocument_id">riskAssessmentDocument_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.riskAssessmentDocument_id references oro_attachment_file.id via FK_4CD9D6F84A872F39"><a href='oro_attachment_file.html'>oro_attachment_file</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">FK_4CD9D6F84A872F39<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="consentDocument_id">consentDocument_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.consentDocument_id references oro_attachment_file.id via FK_4CD9D6F824D0BE70"><a href='oro_attachment_file.html'>oro_attachment_file</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">FK_4CD9D6F824D0BE70<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="isSafeToEmail">isSafeToEmail</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="isSafeToSendLetter">isSafeToSendLetter</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="referralsInAuditLogSummary">referralsInAuditLogSummary</span></td>
+                                    <td>LONGTEXT</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="referralsOutAuditLogSummary">referralsOutAuditLogSummary</span></td>
+                                    <td>LONGTEXT</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="witnessesAuditLogSummary">witnessesAuditLogSummary</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="trialCourtsAuditLogSummary">trialCourtsAuditLogSummary</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="isAnonymised">isAnonymised</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dateConsentToStoreDataUnderDPWithdrawn">dateConsentToStoreDataUnderDPWithdrawn</span></td>
+                                    <td>DATE</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="consentToContactForResearchStatus_id">consentToContactForResearchStatus_id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_witness.consentToContactForResearchStatus_id references ca_witness_consent_to_contact_for_research_status.id via fk_ca_witness_consenttocontactforresearchstatus_id"><a href='ca_witness_consent_to_contact_for_research_status.html'>ca_witness_consent_to_contact_for_research_status</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_consenttocontactforresearchstatus_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dateConsentedToContactForResearch">dateConsentedToContactForResearch</span></td>
+                                    <td>DATE</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PRIMARY</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F816EC9A9F</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>offeredSupportByPhoneStatus_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F831DA6753</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>understandingConfidenceLevel_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F83C0F3628</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>initialContactSource_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F84FD4E126</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>consentToContactForResearchStatus_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F85132E4AE</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>offeredPTVByPhoneStatus_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F85596D5F7</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>trial_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F8561BD49E</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>isViw_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F8575BC9B6</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>isAwareOfVictimsCodeEntitlementBeforeExplainedByWSStaff_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F859294170</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>business_unit_owner_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F8668C0829</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>isAwareOfWitnessCharterEntitlementBeforeExplainedByWSStaff_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F869FB84F8</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>offeredPTVAtCourtStatus_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F86F992649</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>confidentialityAgreementStatus_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F878DEF629</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>dataProtectionConsentStatus_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F8827402C</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>genderId</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F89195B42B</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>givingEvidenceConfidenceLevel_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F8C12AF0FC</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>hasReceivedTailoredCommunicationToMeetTheirSpecifiedNeeds_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F8C685483F</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>trial_type_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F8CADA676F</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>hasSentAYoungWitnessPack_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F8D6093AB6</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>comfortConfidenceLevel_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>IDX_4CD9D6F8D801836</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>offeredOutreachStatus_id</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> UNIQ_0R87D4A0JIJ9</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>consentDocument_id</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> UNIQ_4CD9D6F8F5B7AF75</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>address_id</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> UNIQ_80987D4A0IJ9J</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>riskAssessmentDocument_id</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="ca_referral_in.html" target="_top" title="ca_referral_in" alt="" coords="1631,2634,1937,2865">
+<area shape="rect" id="node2" href="oro_attachment_file.html" target="_top" title="oro_attachment_file" alt="" coords="419,3055,625,3198">
+<area shape="rect" id="node3" href="ca_witness.html" target="_top" title="ca_witness" alt="" coords="803,1181,1523,3037">
+<area shape="rect" id="node8" href="ca_trial.html" target="_top" title="ca_trial" alt="" coords="380,1067,664,1239">
+<area shape="rect" id="node9" href="oro_business_unit.html" target="_top" title="oro_business_unit" alt="" coords="5,1158,241,1330">
+<area shape="rect" id="node10" href="ca_address.html" target="_top" title="ca_address" alt="" coords="426,1425,618,1538">
+<area shape="rect" id="node11" href="ca_witness_confidence_level.html" target="_top" title="ca_witness_confidence_level" alt="" coords="386,2794,658,2907">
+<area shape="rect" id="node12" href="ca_witness_confidentiality_agreement_status.html" target="_top" title="ca_witness_confidentiality_agreement_status" alt="" coords="323,2533,721,2646">
+<area shape="rect" id="node13" href="ca_witness_consent_to_contact_for_research_status.html" target="_top" title="ca_witness_consent_to_contact_for_research_status" alt="" coords="294,3215,750,3329">
+<area shape="rect" id="node14" href="ca_witness_data_protection_consent_status.html" target="_top" title="ca_witness_data_protection_consent_status" alt="" coords="327,2402,717,2515">
+<area shape="rect" id="node15" href="ca_gender.html" target="_top" title="ca_gender" alt="" coords="449,1618,595,1731">
+<area shape="rect" id="node16" href="ca_witness_tailored_communication_status.html" target="_top" title="ca_witness_tailored_communication_status" alt="" coords="330,2010,714,2123">
+<area shape="rect" id="node17" href="ca_witness_given_young_witness_pack_status.html" target="_top" title="ca_witness_given_young_witness_pack_status" alt="" coords="317,2141,727,2254">
+<area shape="rect" id="node18" href="ca_initial_contact_source.html" target="_top" title="ca_initial_contact_source" alt="" coords="400,2663,644,2777">
+<area shape="rect" id="node19" href="ca_witness_aware_of_victims_code_entitlement_status.html" target="_top" title="ca_witness_aware_of_victims_code_entitlement_status" alt="" coords="285,1879,759,1993">
+<area shape="rect" id="node20" href="ca_witness_aware_of_witness_charter_status.html" target="_top" title="ca_witness_aware_of_witness_charter_status" alt="" coords="323,1749,721,1862">
+<area shape="rect" id="node21" href="ca_witness_viw_status.html" target="_top" title="ca_witness_viw_status" alt="" coords="409,2925,635,3038">
+<area shape="rect" id="node22" href="ca_service_offer_status.html" target="_top" title="ca_service_offer_status" alt="" coords="406,2271,638,2385">
+<area shape="rect" id="node23" href="ca_witness_type.html" target="_top" title="ca_witness_type" alt="" coords="429,1294,615,1407">
+<area shape="rect" id="node4" href="ca_referral_out.html" target="_top" title="ca_referral_out" alt="" coords="1673,418,1895,590">
+<area shape="rect" id="node5" href="ca_reminder.html" target="_top" title="ca_reminder" alt="" coords="1682,607,1886,750">
+<area shape="rect" id="node6" href="ca_risk_assessment.html" target="_top" title="ca_risk_assessment" alt="" coords="1657,767,1911,939">
+<area shape="rect" id="node7" href="ca_special_measure.html" target="_top" title="ca_special_measure" alt="" coords="1663,957,1905,1217">
+<area shape="rect" id="node24" href="ca_witness_attendance.html" target="_top" title="ca_witness_attendance" alt="" coords="1669,1234,1899,1406">
+<area shape="rect" id="node25" href="ca_witness_lwac_status.html" target="_top" title="ca_witness_lwac_status" alt="" coords="1666,1424,1902,1544">
+<area shape="rect" id="node26" href="ca_witness_phone_contact_details.html" target="_top" title="ca_witness_phone_contact_details" alt="" coords="1626,1561,1942,1681">
+<area shape="rect" id="node27" href="ca_witness_view_type.html" target="_top" title="ca_witness_view_type" alt="" coords="1672,1699,1896,1819">
+<area shape="rect" id="node28" href="oro_rel_activitylist_witness_witness_7cc73eb9.html" target="_top" title="oro_rel_activitylist_witness_witness_7cc73eb9" alt="" coords="1581,1836,1987,1956">
+<area shape="rect" id="node29" href="oro_rel_calendarevent_witness_witness_9c813ece.html" target="_top" title="oro_rel_calendarevent_witness_witness_9c813ece" alt="" coords="1567,1973,2001,2093">
+<area shape="rect" id="node30" href="oro_rel_letter_witness_witness_9c813ece.html" target="_top" title="oro_rel_letter_witness_witness_9c813ece" alt="" coords="1601,2111,1967,2231">
+<area shape="rect" id="node31" href="oro_rel_phonecall_witness_witness_9c813ece.html" target="_top" title="oro_rel_phonecall_witness_witness_9c813ece" alt="" coords="1583,5,1985,125">
+<area shape="rect" id="node32" href="oro_rel_task_witness_witness_9c813ece.html" target="_top" title="oro_rel_task_witness_witness_9c813ece" alt="" coords="1605,143,1963,263">
+<area shape="rect" id="node33" href="users_phonenumbers.html" target="_top" title="users_phonenumbers" alt="" coords="1674,280,1894,400">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/ca_witness.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="ca_contact.html" target="_top" title="ca_contact" alt="" coords="545,917,694,1001">
+<area shape="rect" id="node2" href="ca_address.html" target="_top" title="ca_address" alt="" coords="258,980,450,1093">
+<area shape="rect" id="node3" href="ca_court.html" target="_top" title="ca_court" alt="" coords="547,1056,691,1140">
+<area shape="rect" id="node4" href="oro_business_unit.html" target="_top" title="oro_business_unit" alt="" coords="236,2841,472,3013">
+<area shape="rect" id="node6" href="oro_organization.html" target="_top" title="oro_organization" alt="" coords="5,2995,192,3079">
+<area shape="rect" id="node5" href="ca_letter.html" target="_top" title="ca_letter" alt="" coords="1203,3251,1337,3335">
+<area shape="rect" id="node7" href="oro_user.html" target="_top" title="oro_user" alt="" coords="806,2844,950,2928">
+<area shape="rect" id="node13" href="oro_attachment_file.html" target="_top" title="oro_attachment_file" alt="" coords="516,2612,723,2755">
+<area shape="rect" id="node8" href="ca_lwac_referral.html" target="_top" title="ca_lwac_referral" alt="" coords="1818,5,2003,89">
+<area shape="rect" id="node9" href="ca_trial.html" target="_top" title="ca_trial" alt="" coords="1128,737,1412,909">
+<area shape="rect" id="node24" href="ca_trial_court.html" target="_top" title="ca_trial_court" alt="" coords="795,2532,961,2616">
+<area shape="rect" id="node10" href="ca_phone_call.html" target="_top" title="ca_phone_call" alt="" coords="1184,497,1356,581">
+<area shape="rect" id="node11" href="ca_referral_in.html" target="_top" title="ca_referral_in" alt="" coords="2379,2208,2685,2439">
+<area shape="rect" id="node12" href="ca_referral_in_source.html" target="_top" title="ca_referral_in_source" alt="" coords="1801,2808,2021,2892">
+<area shape="rect" id="node14" href="ca_witness.html" target="_top" title="ca_witness" alt="" coords="1551,898,2271,2754">
+<area shape="rect" id="node25" href="ca_witness_confidence_level.html" target="_top" title="ca_witness_confidence_level" alt="" coords="1134,2372,1406,2485">
+<area shape="rect" id="node26" href="ca_witness_confidentiality_agreement_status.html" target="_top" title="ca_witness_confidentiality_agreement_status" alt="" coords="1071,2111,1469,2224">
+<area shape="rect" id="node27" href="ca_witness_consent_to_contact_for_research_status.html" target="_top" title="ca_witness_consent_to_contact_for_research_status" alt="" coords="1042,2707,1498,2820">
+<area shape="rect" id="node28" href="ca_witness_data_protection_consent_status.html" target="_top" title="ca_witness_data_protection_consent_status" alt="" coords="1075,1980,1465,2093">
+<area shape="rect" id="node29" href="ca_gender.html" target="_top" title="ca_gender" alt="" coords="1197,1196,1343,1309">
+<area shape="rect" id="node30" href="ca_witness_tailored_communication_status.html" target="_top" title="ca_witness_tailored_communication_status" alt="" coords="1078,1588,1462,1701">
+<area shape="rect" id="node31" href="ca_witness_given_young_witness_pack_status.html" target="_top" title="ca_witness_given_young_witness_pack_status" alt="" coords="1065,1719,1475,1832">
+<area shape="rect" id="node32" href="ca_initial_contact_source.html" target="_top" title="ca_initial_contact_source" alt="" coords="1148,2241,1392,2355">
+<area shape="rect" id="node33" href="ca_witness_aware_of_victims_code_entitlement_status.html" target="_top" title="ca_witness_aware_of_victims_code_entitlement_status" alt="" coords="1033,1457,1507,1571">
+<area shape="rect" id="node34" href="ca_witness_aware_of_witness_charter_status.html" target="_top" title="ca_witness_aware_of_witness_charter_status" alt="" coords="1071,1327,1469,1440">
+<area shape="rect" id="node35" href="ca_witness_viw_status.html" target="_top" title="ca_witness_viw_status" alt="" coords="1157,2503,1383,2616">
+<area shape="rect" id="node36" href="ca_service_offer_status.html" target="_top" title="ca_service_offer_status" alt="" coords="1154,1849,1386,1963">
+<area shape="rect" id="node37" href="ca_witness_type.html" target="_top" title="ca_witness_type" alt="" coords="1177,1065,1363,1179">
+<area shape="rect" id="node15" href="ca_referral_out.html" target="_top" title="ca_referral_out" alt="" coords="2421,83,2643,255">
+<area shape="rect" id="node16" href="ca_referral_out_source.html" target="_top" title="ca_referral_out_source" alt="" coords="1796,107,2025,191">
+<area shape="rect" id="node17" href="ca_reminder.html" target="_top" title="ca_reminder" alt="" coords="2430,1116,2634,1259">
+<area shape="rect" id="node18" href="ca_risk_assessment.html" target="_top" title="ca_risk_assessment" alt="" coords="2405,3059,2659,3231">
+<area shape="rect" id="node19" href="ca_special_measure.html" target="_top" title="ca_special_measure" alt="" coords="2411,288,2653,548">
+<area shape="rect" id="node20" href="ca_special_measure_source.html" target="_top" title="ca_special_measure_source" alt="" coords="1778,512,2043,596">
+<area shape="rect" id="node21" href="ca_special_measure_type.html" target="_top" title="ca_special_measure_type" alt="" coords="1787,208,2035,292">
+<area shape="rect" id="node22" href="ca_special_measure_status.html" target="_top" title="ca_special_measure_status" alt="" coords="1781,411,2041,495">
+<area shape="rect" id="node23" href="ca_special_measure_usage.html" target="_top" title="ca_special_measure_usage" alt="" coords="1781,309,2041,393">
+<area shape="rect" id="node38" href="ca_witness_attendance.html" target="_top" title="ca_witness_attendance" alt="" coords="2417,2456,2647,2628">
+<area shape="rect" id="node39" href="ca_witness_lwac_status.html" target="_top" title="ca_witness_lwac_status" alt="" coords="2414,978,2650,1098">
+<area shape="rect" id="node40" href="ca_lwac_status.html" target="_top" title="ca_lwac_status" alt="" coords="1821,796,2000,880">
+<area shape="rect" id="node41" href="ca_witness_phone_contact_details.html" target="_top" title="ca_witness_phone_contact_details" alt="" coords="2374,2646,2690,2766">
+<area shape="rect" id="node42" href="ca_phone_contact_detail.html" target="_top" title="ca_phone_contact_detail" alt="" coords="1790,2983,2031,3067">
+<area shape="rect" id="node43" href="ca_witness_view_type.html" target="_top" title="ca_witness_view_type" alt="" coords="2420,2921,2644,3041">
+<area shape="rect" id="node44" href="ca_viw_type.html" target="_top" title="ca_viw_type" alt="" coords="1831,3084,1990,3168">
+<area shape="rect" id="node45" href="oro_access_group.html" target="_top" title="oro_access_group" alt="" coords="520,2992,719,3076">
+<area shape="rect" id="node46" href="oro_activity_list.html" target="_top" title="oro_activity_list" alt="" coords="1181,964,1359,1048">
+<area shape="rect" id="node47" href="oro_attachment.html" target="_top" title="oro_attachment" alt="" coords="1180,3149,1360,3233">
+<area shape="rect" id="node48" href="oro_calendar_event.html" target="_top" title="oro_calendar_event" alt="" coords="1166,2837,1374,2921">
+<area shape="rect" id="node49" href="oro_email_attachment.html" target="_top" title="oro_email_attachment" alt="" coords="767,2743,989,2827">
+<area shape="rect" id="node50" href="oro_integration_channel.html" target="_top" title="oro_integration_channel" alt="" coords="1152,3352,1388,3436">
+<area shape="rect" id="node51" href="oro_rel_activitylist_witness_witness_7cc73eb9.html" target="_top" title="oro_rel_activitylist_witness_witness_7cc73eb9" alt="" coords="2329,841,2735,961">
+<area shape="rect" id="node52" href="oro_rel_calendarevent_witness_witness_9c813ece.html" target="_top" title="oro_rel_calendarevent_witness_witness_9c813ece" alt="" coords="2315,1643,2749,1763">
+<area shape="rect" id="node53" href="oro_rel_letter_witness_witness_9c813ece.html" target="_top" title="oro_rel_letter_witness_witness_9c813ece" alt="" coords="2349,3249,2715,3369">
+<area shape="rect" id="node54" href="oro_rel_phonecall_witness_witness_9c813ece.html" target="_top" title="oro_rel_phonecall_witness_witness_9c813ece" alt="" coords="2331,566,2733,686">
+<area shape="rect" id="node55" href="oro_rel_task_witness_witness_9c813ece.html" target="_top" title="oro_rel_task_witness_witness_9c813ece" alt="" coords="2353,703,2711,823">
+<area shape="rect" id="node56" href="orocrm_task.html" target="_top" title="orocrm_task" alt="" coords="1191,599,1349,683">
+<area shape="rect" id="node57" href="oro_report.html" target="_top" title="oro_report" alt="" coords="547,3093,692,3177">
+<area shape="rect" id="node58" href="oro_segment.html" target="_top" title="oro_segment" alt="" coords="537,1157,701,1241">
+<area shape="rect" id="node59" href="oro_user_business_unit.html" target="_top" title="oro_user_business_unit" alt="" coords="1153,3048,1387,3132">
+<area shape="rect" id="node60" href="users_phonenumbers.html" target="_top" title="users_phonenumbers" alt="" coords="2422,2783,2642,2903">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/ca_witness.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ca_address - bap_standard Database</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>bap_standard</b> Database</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>ca_address</h1><p><span id="recordNumber">293</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title='Automatically updated by the database'>√</td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="ca_contact.address_id references ca_address.id via fk_ca_contact_address_id"><a href='ca_contact.html'>ca_contact</a><span class='relatedKey'>.address_id</span></td>
+                                                <td class="constraint detail">fk_ca_contact_address_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ca_court.address_id references ca_address.id via fk_ca_court_address_id"><a href='ca_court.html'>ca_court</a><span class='relatedKey'>.address_id</span></td>
+                                                <td class="constraint detail">fk_ca_court_address_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ca_witness.address_id references ca_address.id via fk_ca_witness_address_id"><a href='ca_witness.html'>ca_witness</a><span class='relatedKey'>.address_id</span></td>
+                                                <td class="constraint detail">fk_ca_witness_address_id<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="addressLine1">addressLine1</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="addressLine2">addressLine2</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="addressLine3">addressLine3</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="addressLine4">addressLine4</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="city">city</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="county">county</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="postcode">postcode</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="isAnonymised">isAnonymised</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="postcodeUnknown">postcodeUnknown</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PRIMARY</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="ca_contact.html" target="_top" title="ca_contact" alt="" coords="541,5,698,148">
+<area shape="rect" id="node2" href="ca_address.html" target="_top" title="ca_address" alt="" coords="5,222,292,582">
+<area shape="rect" id="node3" href="ca_court.html" target="_top" title="ca_court" alt="" coords="501,165,737,367">
+<area shape="rect" id="node4" href="ca_witness.html" target="_top" title="ca_witness" alt="" coords="336,384,903,1172">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/ca_address.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="ca_contact.html" target="_top" title="ca_contact" alt="" coords="375,1265,533,1407">
+<area shape="rect" id="node2" href="ca_address.html" target="_top" title="ca_address" alt="" coords="5,1452,292,1812">
+<area shape="rect" id="node3" href="ca_court.html" target="_top" title="ca_court" alt="" coords="336,1635,572,1837">
+<area shape="rect" id="node4" href="oro_business_unit.html" target="_top" title="oro_business_unit" alt="" coords="50,118,247,202">
+<area shape="rect" id="node5" href="ca_web_court_court_type.html" target="_top" title="ca_web_court_court_type" alt="" coords="26,1830,271,1914">
+<area shape="rect" id="node6" href="ca_experience_survey.html" target="_top" title="ca_experience_survey" alt="" coords="616,1637,841,1721">
+<area shape="rect" id="node7" href="ca_referral_in.html" target="_top" title="ca_referral_in" alt="" coords="2099,38,2267,122">
+<area shape="rect" id="node8" href="oro_attachment_file.html" target="_top" title="oro_attachment_file" alt="" coords="351,1425,557,1509">
+<area shape="rect" id="node9" href="ca_witness.html" target="_top" title="ca_witness" alt="" coords="1368,643,1935,1431">
+<area shape="rect" id="node14" href="ca_trial.html" target="_top" title="ca_trial" alt="" coords="1041,209,1169,293">
+<area shape="rect" id="node16" href="ca_witness_confidence_level.html" target="_top" title="ca_witness_confidence_level" alt="" coords="971,1361,1239,1445">
+<area shape="rect" id="node17" href="ca_witness_confidentiality_agreement_status.html" target="_top" title="ca_witness_confidentiality_agreement_status" alt="" coords="918,1158,1291,1242">
+<area shape="rect" id="node18" href="ca_witness_consent_to_contact_for_research_status.html" target="_top" title="ca_witness_consent_to_contact_for_research_status" alt="" coords="893,1637,1317,1721">
+<area shape="rect" id="node19" href="ca_witness_data_protection_consent_status.html" target="_top" title="ca_witness_data_protection_consent_status" alt="" coords="921,1057,1288,1141">
+<area shape="rect" id="node20" href="ca_gender.html" target="_top" title="ca_gender" alt="" coords="1031,449,1178,533">
+<area shape="rect" id="node21" href="ca_witness_tailored_communication_status.html" target="_top" title="ca_witness_tailored_communication_status" alt="" coords="924,753,1285,837">
+<area shape="rect" id="node22" href="ca_witness_given_young_witness_pack_status.html" target="_top" title="ca_witness_given_young_witness_pack_status" alt="" coords="912,854,1297,938">
+<area shape="rect" id="node23" href="ca_initial_contact_source.html" target="_top" title="ca_initial_contact_source" alt="" coords="983,1259,1226,1343">
+<area shape="rect" id="node24" href="ca_witness_aware_of_victims_code_entitlement_status.html" target="_top" title="ca_witness_aware_of_victims_code_entitlement_status" alt="" coords="885,651,1324,735">
+<area shape="rect" id="node25" href="ca_witness_aware_of_witness_charter_status.html" target="_top" title="ca_witness_aware_of_witness_charter_status" alt="" coords="916,550,1293,634">
+<area shape="rect" id="node26" href="ca_witness_viw_status.html" target="_top" title="ca_witness_viw_status" alt="" coords="991,1462,1218,1546">
+<area shape="rect" id="node27" href="ca_service_offer_status.html" target="_top" title="ca_service_offer_status" alt="" coords="989,955,1221,1039">
+<area shape="rect" id="node28" href="ca_witness_type.html" target="_top" title="ca_witness_type" alt="" coords="1011,310,1198,394">
+<area shape="rect" id="node10" href="ca_referral_out.html" target="_top" title="ca_referral_out" alt="" coords="2095,747,2271,831">
+<area shape="rect" id="node11" href="ca_reminder.html" target="_top" title="ca_reminder" alt="" coords="2103,849,2263,933">
+<area shape="rect" id="node12" href="ca_risk_assessment.html" target="_top" title="ca_risk_assessment" alt="" coords="2078,950,2289,1034">
+<area shape="rect" id="node13" href="ca_special_measure.html" target="_top" title="ca_special_measure" alt="" coords="2077,1051,2289,1135">
+<area shape="rect" id="node15" href="ca_trial_court.html" target="_top" title="ca_trial_court" alt="" coords="645,1425,812,1509">
+<area shape="rect" id="node29" href="ca_witness_attendance.html" target="_top" title="ca_witness_attendance" alt="" coords="2068,1153,2299,1237">
+<area shape="rect" id="node30" href="ca_witness_lwac_status.html" target="_top" title="ca_witness_lwac_status" alt="" coords="2065,1254,2301,1338">
+<area shape="rect" id="node31" href="ca_witness_phone_contact_details.html" target="_top" title="ca_witness_phone_contact_details" alt="" coords="2031,1355,2336,1439">
+<area shape="rect" id="node32" href="ca_witness_view_type.html" target="_top" title="ca_witness_view_type" alt="" coords="2071,139,2295,223">
+<area shape="rect" id="node33" href="oro_calendar_event.html" target="_top" title="oro_calendar_event" alt="" coords="1547,1641,1755,1725">
+<area shape="rect" id="node34" href="oro_rel_activitylist_witness_witness_7cc73eb9.html" target="_top" title="oro_rel_activitylist_witness_witness_7cc73eb9" alt="" coords="1993,241,2373,325">
+<area shape="rect" id="node35" href="oro_rel_calendarevent_witness_witness_9c813ece.html" target="_top" title="oro_rel_calendarevent_witness_witness_9c813ece" alt="" coords="1979,1579,2388,1663">
+<area shape="rect" id="node36" href="oro_rel_letter_witness_witness_9c813ece.html" target="_top" title="oro_rel_letter_witness_witness_9c813ece" alt="" coords="2008,342,2359,426">
+<area shape="rect" id="node37" href="oro_rel_phonecall_witness_witness_9c813ece.html" target="_top" title="oro_rel_phonecall_witness_witness_9c813ece" alt="" coords="1993,443,2373,527">
+<area shape="rect" id="node38" href="oro_rel_task_witness_witness_9c813ece.html" target="_top" title="oro_rel_task_witness_witness_9c813ece" alt="" coords="2011,545,2355,629">
+<area shape="rect" id="node39" href="users_phonenumbers.html" target="_top" title="users_phonenumbers" alt="" coords="2073,646,2293,730">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/ca_address.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>
